@@ -9,6 +9,7 @@
 
 #include "TextureLoader.h"
 #include "Terrain.h"
+#include "DynamicPixelSystem.h"
 
 class Game : public sf::Drawable {
 private:
@@ -17,6 +18,7 @@ private:
 	sf::Vector2f m_WorldCentre = sf::Vector2f(0.0f, 0.0f);
 	TextureLoader* m_TextureLoader;
 	Terrain m_Terrain;
+	DynamicPixelSystem m_DPS;
 public:
 	Game();
 	~Game();

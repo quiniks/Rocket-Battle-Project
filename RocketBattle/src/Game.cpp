@@ -15,6 +15,7 @@ Game::Game()
 	l_Circle.setPosition(100, 300);
 	l_Circle.setFillColor(sf::Color::Transparent);
 	m_Terrain.SubtractShape(&l_Circle);
+
 }
 
 Game::~Game()

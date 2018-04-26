@@ -1,6 +1,6 @@
 #include "DynamicPixel.h"
 
-DynamicPixel::DynamicPixel()
+DynamicPixel::DynamicPixel(float p_LifeTime, sf::Vector2f p_Accel, sf::Vector2f p_Vel, sf::Vector2f p_Pos)
 {
 }
 
