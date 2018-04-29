@@ -25,8 +25,10 @@ sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius
 	sf::Vector2f normal = sf::Vector2f(0.0f, 0.0f);
 	for (int i = -p_Radius; i <= p_Radius; i++) {
 		for (int j = -p_Radius; j <= p_Radius; j++) {
-			if (m_Image.getPixel(p_X + i, p_Y + j).a != 0) {
-				normal -= sf::Vector2f(i, j);
+			if (p_X + i < m_Image.getSize().x && p_Y + j < m_Image.getSize().y) {
+				if (m_Image.getPixel(p_X + i, p_Y + j).a != 0) {
+					normal -= sf::Vector2f((float)i, (float)j);
+				}
 			}
 		}
 	}
@@ -34,7 +36,19 @@ sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius
 	if (length != 0) {
 		normal = normal / length;
 	}
+	std::cout << "normalx" << normal.x << std::endl;
+	std::cout << "normaly" << normal.y << std::endl;
 	return normal;
+}
+
+bool Terrain::isPixelEmpty(sf::Vector2u m_Pos)
+{
+	if (m_Pos.x < m_Image.getSize().x && m_Pos.y < m_Image.getSize().y) {
+		if (m_Image.getPixel(m_Pos.x, m_Pos.y).a == 0) {
+			return true;
+		}
+	}
+	return false;
 }
 
 void Terrain::SubtractShape(sf::Shape* p_Shape)

@@ -33,8 +33,10 @@ TextureLoader * TextureLoader::instance()
 sf::Texture * TextureLoader::getTexture(const std::string& p_String)
 {
 	if (m_Textures.count(p_String)) {
+		
 		return m_Textures.at(p_String);
 	}
+	std::cout << "Texture does not exist" << std::endl;
 	return nullptr;
 }
 

@@ -123,9 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\CollisionHelper.cpp" />
     <ClCompile Include="src\DynamicObject.cpp" />
-    <ClCompile Include="src\DynamicPixel.cpp" />
-    <ClCompile Include="src\DynamicPixelSystem.cpp" />
+    <ClCompile Include="src\Kinematic.cpp" />
+    <ClCompile Include="src\Particle.cpp" />
+    <ClCompile Include="src\ParticleSystem.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Random.cpp" />
@@ -133,9 +135,11 @@
     <ClCompile Include="src\TextureLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\CollisionHelper.h" />
     <ClInclude Include="include\DynamicObject.h" />
-    <ClInclude Include="include\DynamicPixel.h" />
-    <ClInclude Include="include\DynamicPixelSystem.h" />
+    <ClInclude Include="include\Kinematic.h" />
+    <ClInclude Include="include\Particle.h" />
+    <ClInclude Include="include\ParticleSystem.h" />
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\Random.h" />
     <ClInclude Include="include\Terrain.h" />
