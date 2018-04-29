@@ -36,8 +36,8 @@ sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius
 	if (length != 0) {
 		normal = normal / length;
 	}
-	std::cout << "normalx" << normal.x << std::endl;
-	std::cout << "normaly" << normal.y << std::endl;
+	//std::cout << "normalx" << normal.x << std::endl;
+	//std::cout << "normaly" << normal.y << std::endl;
 	return normal;
 }
 
@@ -53,7 +53,7 @@ bool Terrain::isPixelEmpty(sf::Vector2u m_Pos)
 
 void Terrain::SubtractShape(sf::Shape* p_Shape)
 {
-	m_RenderTexture.clear();
+	m_RenderTexture.clear(sf::Color::Transparent);
 	m_RenderTexture.draw(m_Foreground);
 	m_RenderTexture.draw(*p_Shape, sf::BlendMultiply);
 	m_RenderTexture.display();

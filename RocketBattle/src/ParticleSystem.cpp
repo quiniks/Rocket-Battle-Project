@@ -1,7 +1,8 @@
 #include "ParticleSystem.h"
 
-ParticleSystem::ParticleSystem()
+ParticleSystem::ParticleSystem(sf::Vector2u p_WindowSize)
 {
+	m_RenderTexture.create(p_WindowSize.x, p_WindowSize.y);
 }
 
 ParticleSystem::~ParticleSystem()
@@ -10,7 +11,7 @@ ParticleSystem::~ParticleSystem()
 
 void ParticleSystem::Explosion(sf::Vector2f p_Position, sf::Vector2f p_Acceleration, float p_MaxInitialSpeed, unsigned int p_Amount, float p_LifeTime, float p_Restitution)
 {
-	p_LifeTime = std::abs(p_LifeTime);
+	p_LifeTime = abs(p_LifeTime);
 	Random* l_Random = Random::instance();
 	
 	for (unsigned int i = 0; i < p_Amount; i++) {
@@ -19,17 +20,30 @@ void ParticleSystem::Explosion(sf::Vector2f p_Position, sf::Vector2f p_Accelerat
 		sf::Vector2f l_Vel = l_Dir * l_Random->getRand(0.0f, p_MaxInitialSpeed);
 		Particle l_Particle(p_LifeTime, p_Acceleration, l_Vel, p_Position, p_Restitution);
 		m_Particles.push_back(l_Particle);
-		m_Vertices.push_back(sf::Vertex(p_Position));
+		m_Vertices.push_back(sf::Vertex(p_Position, sf::Color::Green));
 	}
 }
 
 void ParticleSystem::Update(float p_DeltaTime)
 {
+	//testing
+	m_RenderTexture.clear(sf::Color::Transparent);
+	if (m_Vertices.size() != 0) {
+		m_RenderTexture.draw(&m_Vertices[0], m_Vertices.size(), sf::Points);
+		m_RenderTexture.display();
+		const sf::Texture& texture = m_RenderTexture.getTexture();
+		m_Sprite.setTexture(texture);
+	}
+
 	for (int i = 0; i < m_Particles.size(); i++) {
 		Particle& l_Particle = m_Particles.at(i);
 		l_Particle.setLastPos(l_Particle.getPosition());
 		l_Particle.integrate(p_DeltaTime);
 		m_Vertices[i].position = l_Particle.getPosition();
+
+		//testing
+		//m_Image.setPixel(l_Particle.getPosition().x, l_Particle.getPosition().y, sf::Color::Green);
+
 		if (l_Particle.getLife() > 0) {
 			l_Particle.setLife(l_Particle.getLife() - p_DeltaTime);
 		}
@@ -53,7 +67,10 @@ unsigned int ParticleSystem::size()
 
 void ParticleSystem::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
+	/*
 	if (m_Vertices.size() != 0) {
 		target.draw(&m_Vertices[0], m_Vertices.size(), sf::Points, states);
 	}
+	*/
+	target.draw(m_Sprite, states);
 }

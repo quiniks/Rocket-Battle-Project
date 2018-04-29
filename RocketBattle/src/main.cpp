@@ -3,7 +3,8 @@
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Rocket Battle Project");
-	Game game;
+
+	Game game(window);
 
 	sf::Clock clock;
 	const unsigned int fps = 60;
@@ -50,7 +51,7 @@ int main() {
 			accumulatedTime -= timeStep;
 		}
 		//render
-		window.clear(sf::Color::Black);
+		window.clear(sf::Color::Blue);
 		window.draw(game);
 		window.display();
 		//system("cls");
