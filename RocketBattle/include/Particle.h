@@ -21,5 +21,7 @@ public:
 	sf::Vector2f getLastPos();
 	void setLife(float p_Time);
 	float getLife();
+	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
+	void UpdateChild();
 	~Particle();
 };

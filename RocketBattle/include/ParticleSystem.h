@@ -18,11 +18,9 @@ class ParticleSystem : public sf::Drawable {
 private:
 	std::vector<Particle> m_Particles;
 	std::vector<sf::Vertex> m_Vertices;
-	//testing
-	sf::RenderTexture m_RenderTexture;
 	sf::Sprite m_Sprite;
 public:
-	ParticleSystem(sf::Vector2u p_WindowSize);
+	ParticleSystem(/*sf::Vector2u p_WindowSize*/);
 	~ParticleSystem();
 	void Explosion(sf::Vector2f p_Position, sf::Vector2f p_Acceleration, float p_MaxInitialSpeed, unsigned int p_Amount, float p_LifeTime, float p_Restitution);
 	void Update(float p_DeltaTime);

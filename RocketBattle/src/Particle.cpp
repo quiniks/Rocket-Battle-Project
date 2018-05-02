@@ -29,6 +29,14 @@ float Particle::getLife()
 	return m_LifeTime;
 }
 
+void Particle::draw(sf::RenderTarget & target, sf::RenderStates states) const
+{
+}
+
+void Particle::UpdateChild()
+{
+}
+
 Particle::~Particle()
 {
 }

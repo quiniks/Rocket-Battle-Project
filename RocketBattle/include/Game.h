@@ -10,6 +10,7 @@
 #include "TextureLoader.h"
 #include "Terrain.h"
 #include "ParticleSystem.h"
+#include "Rocket.h"
 
 class Game : public sf::Drawable {
 private:
@@ -18,7 +19,7 @@ private:
 	sf::Vector2f m_Gravity = sf::Vector2f(0.0f, 9.81f);
 	TextureLoader* m_TextureLoader;
 	Terrain m_Terrain;
-	ParticleSystem* m_ParticleSystem;
+	ParticleSystem m_ParticleSystem;
 
 	sf::Vector2f m_MouseWorldPos;
 	bool m_Debug = false;

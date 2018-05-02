@@ -3,6 +3,9 @@
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Rocket Battle Project");
+	sf::RenderTexture l_RenderTex;
+	l_RenderTex.create(window.getSize().x, window.getSize().y);
+	sf::Sprite l_Canvas;
 
 	Game game(window);
 
@@ -51,10 +54,14 @@ int main() {
 			accumulatedTime -= timeStep;
 		}
 		//render
-		window.clear(sf::Color::Blue);
-		window.draw(game);
+		window.clear(sf::Color::Black);
+		l_RenderTex.clear(sf::Color::Transparent);
+		l_RenderTex.draw(game);
+		l_RenderTex.display();
+		const sf::Texture& texture = l_RenderTex.getTexture();
+		l_Canvas.setTexture(texture);
+		window.draw(l_Canvas);
 		window.display();
-		//system("cls");
 	}
 	//system("pause");
 	return EXIT_SUCCESS;

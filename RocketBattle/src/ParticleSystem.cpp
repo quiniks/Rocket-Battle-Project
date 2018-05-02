@@ -1,8 +1,8 @@
 #include "ParticleSystem.h"
 
-ParticleSystem::ParticleSystem(sf::Vector2u p_WindowSize)
+ParticleSystem::ParticleSystem(/*sf::Vector2u p_WindowSize*/)
 {
-	m_RenderTexture.create(p_WindowSize.x, p_WindowSize.y);
+	//m_RenderTexture.create(p_WindowSize.x, p_WindowSize.y);
 }
 
 ParticleSystem::~ParticleSystem()
@@ -26,23 +26,11 @@ void ParticleSystem::Explosion(sf::Vector2f p_Position, sf::Vector2f p_Accelerat
 
 void ParticleSystem::Update(float p_DeltaTime)
 {
-	//testing
-	m_RenderTexture.clear(sf::Color::Transparent);
-	if (m_Vertices.size() != 0) {
-		m_RenderTexture.draw(&m_Vertices[0], m_Vertices.size(), sf::Points);
-		m_RenderTexture.display();
-		const sf::Texture& texture = m_RenderTexture.getTexture();
-		m_Sprite.setTexture(texture);
-	}
-
 	for (int i = 0; i < m_Particles.size(); i++) {
 		Particle& l_Particle = m_Particles.at(i);
 		l_Particle.setLastPos(l_Particle.getPosition());
-		l_Particle.integrate(p_DeltaTime);
+		l_Particle.Update(p_DeltaTime);
 		m_Vertices[i].position = l_Particle.getPosition();
-
-		//testing
-		//m_Image.setPixel(l_Particle.getPosition().x, l_Particle.getPosition().y, sf::Color::Green);
 
 		if (l_Particle.getLife() > 0) {
 			l_Particle.setLife(l_Particle.getLife() - p_DeltaTime);
@@ -67,10 +55,7 @@ unsigned int ParticleSystem::size()
 
 void ParticleSystem::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
-	/*
 	if (m_Vertices.size() != 0) {
 		target.draw(&m_Vertices[0], m_Vertices.size(), sf::Points, states);
 	}
-	*/
-	target.draw(m_Sprite, states);
 }
