@@ -51,11 +51,11 @@ bool Terrain::isPixelEmpty(sf::Vector2u m_Pos)
 	return false;
 }
 
-void Terrain::SubtractShape(sf::Shape* p_Shape)
+void Terrain::SubtractShape(sf::Shape& p_Shape)
 {
 	m_RenderTexture.clear(sf::Color::Transparent);
 	m_RenderTexture.draw(m_Foreground);
-	m_RenderTexture.draw(*p_Shape, sf::BlendMultiply);
+	m_RenderTexture.draw(p_Shape, sf::BlendMultiply);
 	m_RenderTexture.display();
 
 	*m_Texture = m_RenderTexture.getTexture();

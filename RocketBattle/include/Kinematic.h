@@ -23,20 +23,24 @@ protected:
 	float m_AngularVelocity = 0.0f;
 	float m_AngularAcceleration = 0.0f;
 
-	virtual void UpdateChild() = 0;
+	virtual void update() = 0;
 public:
 	Kinematic();
 	~Kinematic();
 	sf::Vector2f getPosition();
 	sf::Vector2f getVelocity();
 	sf::Vector2f getAcceleration();
+	float getAngularVel();
+
+	void applyAcceleration(sf::Vector2f p_Acceleration);
+
 	void setPosition(sf::Vector2f p_Position);
 	void setVelocity(sf::Vector2f p_Velocity);
-	void setAcceleration(sf::Vector2f p_Acceleration);
-	void setRotation(float p_Rotation);
+	//void setAcceleration(sf::Vector2f p_Acceleration);
+	//void setRotation(float p_Rotation);
 	void setAngularVel(float p_AngularVel);
-	void setAngularAccel(float p_AngularAccel);
-	void Update(float p_DeltaTime);
+	//void setAngularAccel(float p_AngularAccel);
+	void polyUpdate(float p_DeltaTime);
 
 	virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const = 0;
 };

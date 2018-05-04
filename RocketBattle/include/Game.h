@@ -20,9 +20,11 @@ private:
 	TextureLoader* m_TextureLoader;
 	Terrain m_Terrain;
 	ParticleSystem m_ParticleSystem;
-
+	std::vector<Rocket> m_Rockets;
 	sf::Vector2f m_MouseWorldPos;
 	bool m_Debug = false;
+	enum  m_Teams { red, blue };
+	sf::RectangleShape m_test;
 public:
 	Game(sf::RenderWindow& p_Window);
 	~Game();

@@ -1,15 +1,14 @@
 #include "ParticleSystem.h"
 
-ParticleSystem::ParticleSystem(/*sf::Vector2u p_WindowSize*/)
+ParticleSystem::ParticleSystem()
 {
-	//m_RenderTexture.create(p_WindowSize.x, p_WindowSize.y);
 }
 
 ParticleSystem::~ParticleSystem()
 {
 }
 
-void ParticleSystem::Explosion(sf::Vector2f p_Position, sf::Vector2f p_Acceleration, float p_MaxInitialSpeed, unsigned int p_Amount, float p_LifeTime, float p_Restitution)
+void ParticleSystem::Explosion(sf::Vector2f p_Position, sf::Vector2f p_Acceleration, float p_MaxInitialSpeed, unsigned int p_Amount, float p_LifeTime, float p_Restitution, float p_Density, float p_DragCo)
 {
 	p_LifeTime = abs(p_LifeTime);
 	Random* l_Random = Random::instance();
@@ -18,7 +17,7 @@ void ParticleSystem::Explosion(sf::Vector2f p_Position, sf::Vector2f p_Accelerat
 		float l_Radians = l_Random->getRand(0.0f, 1.0f) * 3.141592f * 2.0f;
 		sf::Vector2f l_Dir = sf::Vector2f(cos(l_Radians), sin(l_Radians));
 		sf::Vector2f l_Vel = l_Dir * l_Random->getRand(0.0f, p_MaxInitialSpeed);
-		Particle l_Particle(p_LifeTime, p_Acceleration, l_Vel, p_Position, p_Restitution);
+		Particle l_Particle(p_LifeTime, p_Acceleration, l_Vel, p_Position, p_Restitution, p_Density, p_DragCo);
 		m_Particles.push_back(l_Particle);
 		m_Vertices.push_back(sf::Vertex(p_Position, sf::Color::Green));
 	}
@@ -28,8 +27,8 @@ void ParticleSystem::Update(float p_DeltaTime)
 {
 	for (int i = 0; i < m_Particles.size(); i++) {
 		Particle& l_Particle = m_Particles.at(i);
-		l_Particle.setLastPos(l_Particle.getPosition());
-		l_Particle.Update(p_DeltaTime);
+		//l_Particle.setLastPos(l_Particle.getPosition());
+		l_Particle.polyUpdate(p_DeltaTime);
 		m_Vertices[i].position = l_Particle.getPosition();
 
 		if (l_Particle.getLife() > 0) {
