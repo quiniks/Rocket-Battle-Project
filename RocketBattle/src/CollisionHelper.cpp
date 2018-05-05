@@ -25,7 +25,7 @@ float CollisionHelper::cross(sf::Vector2f a, sf::Vector2f b)
 
 float CollisionHelper::mag(sf::Vector2f a)
 {
-	return sqrt(a.x * a.x + a.y * a.y);
+	return sqrtf(a.x * a.x + a.y * a.y);
 }
 
 sf::Vector2f CollisionHelper::unit(sf::Vector2f a)
@@ -166,6 +166,10 @@ bool CollisionHelper::AABBvsTerrain(sf::FloatRect p_BB, sf::Vector2f p_Pos, Terr
 		p_AverageUnitNormal = l_SumUnitNormal / (float)l_Total;
 		return true;
 	}
+	return false;
+}
+bool CollisionHelper::AABBvsAABB(sf::FloatRect p_BB1, sf::Vector2f p_Pos1, sf::FloatRect p_BB2, sf::Vector2f p_Pos2)
+{
 	return false;
 }
 /*

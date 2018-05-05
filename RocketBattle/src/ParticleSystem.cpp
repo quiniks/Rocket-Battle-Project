@@ -37,7 +37,7 @@ void ParticleSystem::Update(float p_DeltaTime)
 		else {
 			m_Particles.erase(m_Particles.begin() + i);
 			m_Vertices.erase(m_Vertices.begin() + i);
-			i = i - 1;
+			i = i--;
 		}
 	}
 }

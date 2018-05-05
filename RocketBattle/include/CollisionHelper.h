@@ -21,4 +21,5 @@ public:
 	static bool rayCast(sf::Vector2i p_Start, sf::Vector2i p_Target, Terrain& p_Terrain, sf::Vector2i& p_HitPos); //could move to terrain class
 	//static bool OBBvsTerrain(sf::RectangleShape & p_StartBoundingBox, sf::RectangleShape & p_TargetBoundingBox, Terrain& p_Terrain, sf::Vector2i& p_CorrectionPos, sf::Vector2i& p_ContactVector, sf::Vector2i& p_ContactPos);
 	static bool AABBvsTerrain(sf::FloatRect p_BB, sf::Vector2f p_Pos, Terrain& p_Terrain, sf::Vector2f& p_AverageUnitNormal);
+	static bool AABBvsAABB(sf::FloatRect p_BB1, sf::Vector2f p_Pos1, sf::FloatRect p_BB2, sf::Vector2f p_Pos2);
 };

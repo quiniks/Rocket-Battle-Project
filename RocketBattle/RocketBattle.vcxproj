@@ -123,6 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AimLine.cpp" />
+    <ClCompile Include="src\DynamicSprite.cpp" />
     <ClCompile Include="src\CollisionHelper.cpp" />
     <ClCompile Include="src\DynamicObject.cpp" />
     <ClCompile Include="src\Kinematic.cpp" />
@@ -136,6 +138,8 @@
     <ClCompile Include="src\TextureLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AimLine.h" />
+    <ClInclude Include="include\DynamicSprite.h" />
     <ClInclude Include="include\CollisionHelper.h" />
     <ClInclude Include="include\DynamicObject.h" />
     <ClInclude Include="include\Kinematic.h" />

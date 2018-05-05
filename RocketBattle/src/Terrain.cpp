@@ -10,14 +10,14 @@ Terrain::~Terrain()
 
 }
 
-void Terrain::LoadTerrain(sf::Texture* p_Texture)
+void Terrain::LoadTerrain(sf::Texture* p_ForegroundTexture, sf::Texture* p_BackgroundTexture)
 {
-	m_Texture = p_Texture;
-	m_Image = p_Texture->copyToImage();
-	m_Background.setTexture(*p_Texture);
-	m_Foreground.setTexture(*p_Texture);
-	m_Foreground.setPosition(1.0f, 1.0f);
-	m_RenderTexture.create(p_Texture->getSize().x, p_Texture->getSize().y, false);
+	m_Texture = p_ForegroundTexture;
+	m_Image = p_ForegroundTexture->copyToImage();
+	m_Background.setTexture(*p_BackgroundTexture);
+	m_Foreground.setTexture(*p_ForegroundTexture);
+	m_Foreground.setPosition(0.0f, 0.0f);
+	m_RenderTexture.create(p_ForegroundTexture->getSize().x, p_ForegroundTexture->getSize().y, false);
 }
 
 sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius)
@@ -65,5 +65,6 @@ void Terrain::SubtractShape(sf::Shape& p_Shape)
 
 void Terrain::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
+	target.draw(m_Background);
 	target.draw(m_Foreground);
 }
