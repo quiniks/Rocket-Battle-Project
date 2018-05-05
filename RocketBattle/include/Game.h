@@ -12,7 +12,7 @@
 #include "ParticleSystem.h"
 #include "Rocket.h"
 #include "AimLine.h"
-#include "DynamicSprite.h"
+#include "Projectile.h"
 
 class Game : public sf::Drawable {
 private:
@@ -23,7 +23,7 @@ private:
 	Terrain m_Terrain;
 	ParticleSystem m_ParticleSystem;
 	std::vector<Rocket> m_Rockets;
-	std::vector<DynamicSprite> m_Bullets;
+	std::vector<Projectile> m_Bullets;
 	sf::Vector2f m_MouseWorldPos;
 	bool m_Debug = false;
 	enum  Teams { neutral, red, blue };

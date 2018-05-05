@@ -170,38 +170,39 @@ bool CollisionHelper::AABBvsTerrain(sf::FloatRect p_BB, sf::Vector2f p_Pos, Terr
 }
 bool CollisionHelper::AABBvsAABB(sf::FloatRect p_BB1, sf::Vector2f p_Pos1, sf::FloatRect p_BB2, sf::Vector2f p_Pos2)
 {
-	return false;
-}
-/*
-bool CollisionHelper::OBBvsTerrain(sf::RectangleShape & p_StartBoundingBox, sf::RectangleShape & p_TargetBoundingBox, Terrain & p_Terrain, sf::Vector2i& p_CorrectionPos, sf::Vector2i& p_ContactVector, sf::Vector2i& p_ContactPos)
-{
-	sf::Vector2i l_BestCorrectionVector = sf::Vector2i(0, 0);
-	float l_BestDist = 0.0f;
-	bool l_Debounce = false;
-	int l_HitFailCounter = 0;
-	for (int i = 0; i < p_StartBoundingBox.getPointCount(); i++) {
-		sf::Vector2i l_PointA = (sf::Vector2i)p_StartBoundingBox.getTransform().transformPoint(p_StartBoundingBox.getPoint(i));
-		sf::Vector2i l_PointB = (sf::Vector2i)p_TargetBoundingBox.getTransform().transformPoint(p_TargetBoundingBox.getPoint(i));
-		sf::Vector2i l_ColPoint = sf::Vector2i(0, 0);
-		bool l_Hit = rayCast(l_PointA, l_PointB, p_Terrain, l_ColPoint);
-		if (l_Hit) {
-			float l_Dist = sqrt((l_PointA.x - l_ColPoint.x) * (l_PointA.x - l_ColPoint.x) + (l_PointA.y - l_ColPoint.y) * (l_PointA.y - l_ColPoint.y));
-			if (l_Dist < l_BestDist || l_Debounce == false) {
-				l_Debounce = true;
-				l_BestDist = l_Dist;
-				l_BestCorrectionVector = l_ColPoint - l_PointA;
-				p_ContactPos = l_ColPoint;
-				p_ContactVector = l_PointA - (sf::Vector2i)p_StartBoundingBox.getPosition();
-			}
-			p_CorrectionPos = (sf::Vector2i)p_StartBoundingBox.getPosition() + l_BestCorrectionVector;
-		}
-		else {
-			l_HitFailCounter++;
-		}
-		if (l_HitFailCounter == p_StartBoundingBox.getPointCount()) {
-			return false;
-		}
+	sf::Vector2u l_TopLeft1 = (sf::Vector2u)((sf::Vector2i)p_Pos1 + sf::Vector2i(-p_BB1.width / 2, -p_BB1.height / 2));
+	sf::Vector2u l_TopLeft2 = (sf::Vector2u)((sf::Vector2i)p_Pos2 + sf::Vector2i(-p_BB2.width / 2, -p_BB2.height / 2));
+
+	sf::Vector2u l_BottomRight1 = (sf::Vector2u)((sf::Vector2i)p_Pos1 - sf::Vector2i(-p_BB1.width / 2, -p_BB1.height / 2));
+	sf::Vector2u l_BottomRight2 = (sf::Vector2u)((sf::Vector2i)p_Pos2 - sf::Vector2i(-p_BB2.width / 2, -p_BB2.height / 2));
+
+	if (l_BottomRight1.x < l_TopLeft2.x || l_TopLeft1.x > l_BottomRight2.x) {
+		return false;
+	}
+	if (l_BottomRight1.y < l_TopLeft2.y || l_TopLeft1.y > l_BottomRight2.y) {
+		return false;
 	}
 	return true;
 }
-*/
+bool CollisionHelper::AABBvsCircle(sf::CircleShape p_Circle1, sf::Vector2f p_Pos1, sf::FloatRect p_BB2, sf::Vector2f p_Pos2)
+{
+	sf::Vector2f l_Diff = p_Pos2 - p_Pos1;
+	sf::Vector2f l_DiffConstrained;
+	if (l_Diff.x < 0) {
+		l_DiffConstrained.x = std::max(l_Diff.x, -p_BB2.width / 2.0f);
+	}
+	else {
+		l_DiffConstrained.x = std::min(l_Diff.x, p_BB2.width / 2.0f);
+	}
+	if (l_Diff.y < 0) {
+		l_DiffConstrained.y = std::max(l_Diff.y, -p_BB2.height / 2.0f);
+	}
+	else {
+		l_DiffConstrained.y = std::min(l_Diff.y, p_BB2.height / 2.0f);
+	}
+	float l_Pen = -(mag(l_Diff - l_DiffConstrained) - p_Circle1.getRadius());
+	if (l_Pen > 0) {
+		return true;
+	}
+	return false;
+}
