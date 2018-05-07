@@ -12,7 +12,6 @@ int main() {
 	TextureLoader* l_TextureLoader = TextureLoader::instance();
 	l_TextureLoader->loadTextures(".\\Assets\\Textures");
 
-
 	Scene* l_CurrentScene;
 	l_CurrentScene = new Menu(window.getSize());
 

@@ -1,7 +1,7 @@
 #include "Random.h"
 
 //make the instance a nullptr intially
-Random * Random::m_spInstance = nullptr;
+Random * Random::m_Instance = nullptr;
 
 Random::Random()
 {
@@ -11,16 +11,16 @@ Random::Random()
 
 Random::~Random()
 {
-	delete m_spInstance;
-	m_spInstance = nullptr;
+	delete m_Instance;
+	m_Instance = nullptr;
 }
 
 Random * Random::instance()
 {
-	if (m_spInstance == nullptr) {
-		m_spInstance = new Random();
+	if (m_Instance == nullptr) {
+		m_Instance = new Random();
 	}
-	return m_spInstance;
+	return m_Instance;
 }
 
 float Random::getRand(float p_Min, float p_Max)

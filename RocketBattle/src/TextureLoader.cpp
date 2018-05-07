@@ -1,11 +1,7 @@
 #include "TextureLoader.h"
 
-/**
-@file TextureLoader.cpp
-*/
-
 //make the instance a nullptr intially
-TextureLoader * TextureLoader::m_spInstance = nullptr;
+TextureLoader * TextureLoader::m_Instance = nullptr;
 
 TextureLoader::TextureLoader()
 {
@@ -14,8 +10,8 @@ TextureLoader::TextureLoader()
 
 TextureLoader::~TextureLoader()
 {
-	delete m_spInstance;
-	m_spInstance = nullptr;
+	delete m_Instance;
+	m_Instance = nullptr;
 	for (auto& pair : m_Textures) {
 		delete pair.second;
 		pair.second = nullptr;
@@ -24,10 +20,10 @@ TextureLoader::~TextureLoader()
 
 TextureLoader * TextureLoader::instance()
 {
-	if (m_spInstance == nullptr) {
-		m_spInstance = new TextureLoader();
+	if (m_Instance == nullptr) {
+		m_Instance = new TextureLoader();
 	}
-	return m_spInstance;
+	return m_Instance;
 }
 
 sf::Texture * TextureLoader::getTexture(const std::string& p_String)

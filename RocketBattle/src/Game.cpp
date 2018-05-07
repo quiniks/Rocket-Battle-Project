@@ -19,7 +19,7 @@ Game::Game(sf::Vector2u p_WindowSize)
 	m_PauseSprite.setOrigin(m_PauseSprite.getLocalBounds().width / 2.0f, m_PauseSprite.getLocalBounds().height / 2.0f);
 
 	sf::Texture* m_Map = m_TextureLoader->getTexture("CubeMap.png");
-	m_Terrain.LoadTerrain(m_Map, m_TextureLoader->getTexture("CubeMapBack.png"));
+	m_Terrain.loadTerrain(m_Map, m_TextureLoader->getTexture("CubeMapBack.png"));
 
 	m_MiniView.setSize(m_Map->getSize().x, m_Map->getSize().y);
 	m_MiniView.setCenter(m_Map->getSize().x / 2, m_Map->getSize().y / 2);
@@ -73,9 +73,9 @@ void Game::handleMouseInput(sf::Mouse::Button button)
 {
 	if (button == sf::Mouse::Left) {
 		if (m_State == State::running) {
-			if (m_bHasShot == false) {
-				m_bHasShot = true;
-				m_Bullets.push_back(Projectile(m_TextureLoader->getTexture("Bullet.png"), 0.0f, sf::Vector2f(7.0f, 7.0f), m_PlayerRocket->getPosition(), 0.1f, 5.0f, 0.0f, 100.0f));
+			if (m_HasShot == false) {
+				m_HasShot = true;
+				m_Bullets.push_back(Projectile(m_TextureLoader->getTexture("Bullet.png"), 0.0f, sf::Vector2f(7.0f, 7.0f), m_PlayerRocket->getPosition(), 0.1f, 5.0f, 0.0f, 50.0f));
 				sf::Vector2f l_InitialVel = m_AimLine.getMultiplier() * 100.0f * m_AimLine.getDirUnit();
 				m_Bullets.back().setVelocity(l_InitialVel);
 			}
@@ -88,7 +88,7 @@ void Game::handleInputPerUpdate()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		if (m_Rockets.size() != 0) {
 			if (m_PlayerRocket->getFuel() > 0.0f) {
-				m_bMoving = true;
+				m_Moving = true;
 				m_PlayerRocket->applyForce(sf::Vector2f(0.0f, -1000000.0f));
 				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
 			}
@@ -97,7 +97,7 @@ void Game::handleInputPerUpdate()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 		if (m_Rockets.size() != 0) {
 			if (m_PlayerRocket->getFuel() > 0.0f) {
-				m_bMoving = true;
+				m_Moving = true;
 				m_PlayerRocket->applyForce(sf::Vector2f(-1000000.0f, 0.0f));
 				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
 			}
@@ -106,7 +106,7 @@ void Game::handleInputPerUpdate()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
 		if (m_Rockets.size() != 0) {
 			if (m_PlayerRocket->getFuel() > 0.0f) {
-				m_bMoving = true;
+				m_Moving = true;
 				m_PlayerRocket->applyForce(sf::Vector2f(0.0f, 1000000.0f));
 				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
 			}
@@ -115,7 +115,7 @@ void Game::handleInputPerUpdate()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
 		if (m_Rockets.size() != 0) {
 			if (m_PlayerRocket->getFuel() > 0.0f) {
-				m_bMoving = true;
+				m_Moving = true;
 				m_PlayerRocket->applyForce(sf::Vector2f(1000000.0f, 0.0f));
 				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
 			}
@@ -133,8 +133,8 @@ void Game::passTurn()
 			l_PrevTeam = m_Rockets.at(i-1).getTeam();
 			l_CurrentTeam = m_Rockets.at(i).getTeam();
 			if (l_PrevTeam != l_CurrentTeam) {
-				i = m_Rockets.size();
 				l_GameOver = false;
+				break;
 			}
 			else {
 				l_GameOver = true;
@@ -193,14 +193,14 @@ void Game::passTurn()
 			}
 		}
 	}
-	m_bHasShot = false;
+	m_HasShot = false;
 }
 
 void Game::update(float p_TimeStep)
 {
 	if (m_State == 0) {
 		handleInputPerUpdate();
-		if (!m_bHasShot) {
+		if (!m_HasShot) {
 			m_View.setCenter(m_PlayerRocket->getPosition());
 			m_ViewArea.setPosition(m_PlayerRocket->getPosition());
 			m_PauseSprite.setPosition(m_PlayerRocket->getPosition());
@@ -211,7 +211,7 @@ void Game::update(float p_TimeStep)
 			m_PauseSprite.setPosition(m_Bullets.at(0).getPosition());
 		}
 
-		if (m_bMoving) {
+		if (m_Moving) {
 			if (m_PlayerRocket->getTeam() == Teams::red) {
 				m_PlayerRocket->setTexture(m_TextureLoader->getTexture("RedRocketThrust.png"));
 			}
@@ -227,7 +227,7 @@ void Game::update(float p_TimeStep)
 				m_PlayerRocket->setTexture(m_TextureLoader->getTexture("BlueRocket.png"));
 			}
 		}
-		m_bMoving = false;
+		m_Moving = false;
 
 		m_AimLine.update(m_MouseWorldPos, m_PlayerRocket->getPosition());
 
@@ -246,7 +246,7 @@ void Game::update(float p_TimeStep)
 				l_Circle.setPosition(l_Bullet.getPosition());
 				l_Circle.setOrigin(sf::Vector2f(l_Circle.getRadius(), l_Circle.getRadius()));
 				l_Circle.setFillColor(sf::Color::Transparent);
-				m_Terrain.SubtractShape(l_Circle);
+				m_Terrain.subtractShape(l_Circle);
 
 				for (int j = 0; j < m_Rockets.size(); j++) {
 					Rocket& l_Rocket = m_Rockets.at(j);
@@ -286,7 +286,7 @@ void Game::update(float p_TimeStep)
 					l_Circle.setPosition(l_Bullet.getPosition());
 					l_Circle.setOrigin(sf::Vector2f(l_Circle.getRadius(), l_Circle.getRadius()));
 					l_Circle.setFillColor(sf::Color::Transparent);
-					m_Terrain.SubtractShape(l_Circle);
+					m_Terrain.subtractShape(l_Circle);
 
 					passTurn();
 					m_ParticleSystem.Explosion(l_Bullet.getPosition(), m_Gravity, 50.0f, 100, 20.0f, 0.3f, 2.0f, 0.001f);
@@ -301,7 +301,7 @@ void Game::update(float p_TimeStep)
 				//dyn l_Particle has collided with terrain
 				sf::Vector2i l_ColPos = sf::Vector2i(0, 0);
 				bool l_Hit = CollisionHelper::rayCast((sf::Vector2i)l_Particle.getLastPos(), (sf::Vector2i)l_Particle.getPosition(), m_Terrain, l_ColPos);
-				sf::Vector2f l_Normal = m_Terrain.GetNormal(l_Particle.getPosition().x, l_Particle.getPosition().y, 3);
+				sf::Vector2f l_Normal = m_Terrain.getNormal(l_Particle.getPosition().x, l_Particle.getPosition().y, 3);
 				CollisionHelper::resolve(l_Particle, l_Normal, l_ColPos);
 			}
 			l_Particle.applyAcceleration(m_Gravity);

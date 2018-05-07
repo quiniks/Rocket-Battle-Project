@@ -1,3 +1,7 @@
+/*!
+@file Menu.h
+*/
+
 #pragma once
 
 #include <SFML/Graphics.hpp>
@@ -7,17 +11,42 @@
 #include "TextButton.h"
 #include "Game.h"
 
+/* \class Menu
+\brief A menu scene that displays some useful info and allows you to start the game
+*/
+
 class Menu : public Scene {
 private:
-	sf::Font m_PixelFont;
-	sf::Text m_Title;
-	TextButton* m_StartButton;
-	sf::Sprite m_Hint;
+	sf::Font m_PixelFont; //!< Font to be used
+	sf::Text m_Title; //!< Title text to be displayed
+	TextButton* m_StartButton; //!< Start button
+	sf::Sprite m_Hint; //!< Helpful sprite with instructions on how to play game
 public:
+	/*!
+	* Constructor
+	* @param[in] p_WindowSize initial window size
+	*/
 	Menu(sf::Vector2u p_WindowSize);
-	~Menu();
-	void handleKeyboardInput(int key);
-	void handleMouseInput(sf::Mouse::Button button);
+	~Menu(); //!< Destructor
+	/*!
+	* handle keyboard events
+	* @param[in] p_Key the key that was pressed
+	*/
+	void handleKeyboardInput(int p_Key);
+	/*!
+	* handle mouse button events
+	* @param[in] p_Button the button that was pressed
+	*/
+	void handleMouseInput(sf::Mouse::Button p_Button);
+	/*!
+	* update the menu
+	* @param[in] p_TimeStep time elapsed since last frame
+	*/
 	void update(float p_TimeStep);
+	/*!
+	* Draw
+	* @param[in, out] target Render target to draw to
+	* @param[in] states Render state
+	*/
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

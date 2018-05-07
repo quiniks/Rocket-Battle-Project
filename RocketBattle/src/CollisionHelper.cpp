@@ -143,22 +143,22 @@ bool CollisionHelper::AABBvsTerrain(sf::FloatRect p_BB, sf::Vector2f p_Pos, Terr
 		sf::Vector2i l_Bottom = l_BottomRight - sf::Vector2i(i, 0);
 		sf::Vector2i l_Right = l_BottomRight - sf::Vector2i(0, i);
 		if (!p_Terrain.isPixelEmpty(l_Top)) {
-			l_SumUnitNormal += p_Terrain.GetNormal(l_Top.x, l_Top.y, 2);
+			l_SumUnitNormal += p_Terrain.getNormal(l_Top.x, l_Top.y, 2);
 			l_Total++;
 		}
 		//left
 		if (!p_Terrain.isPixelEmpty(l_Left)) {
-			l_SumUnitNormal += p_Terrain.GetNormal(l_Left.x, l_Left.y, 2);
+			l_SumUnitNormal += p_Terrain.getNormal(l_Left.x, l_Left.y, 2);
 			l_Total++;
 		}
 		//bottom
 		if (!p_Terrain.isPixelEmpty(l_Bottom)) {
-			l_SumUnitNormal += p_Terrain.GetNormal(l_Bottom.x, l_Bottom.y, 2);
+			l_SumUnitNormal += p_Terrain.getNormal(l_Bottom.x, l_Bottom.y, 2);
 			l_Total++;
 		}
 		//right
 		if (!p_Terrain.isPixelEmpty(l_Right)) {
-			l_SumUnitNormal += p_Terrain.GetNormal(l_Right.x, l_Right.y, 2);
+			l_SumUnitNormal += p_Terrain.getNormal(l_Right.x, l_Right.y, 2);
 			l_Total++;
 		}
 	}

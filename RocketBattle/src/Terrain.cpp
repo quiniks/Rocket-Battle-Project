@@ -10,7 +10,7 @@ Terrain::~Terrain()
 
 }
 
-void Terrain::LoadTerrain(sf::Texture* p_ForegroundTexture, sf::Texture* p_BackgroundTexture)
+void Terrain::loadTerrain(sf::Texture* p_ForegroundTexture, sf::Texture* p_BackgroundTexture)
 {
 	m_Texture = *p_ForegroundTexture;
 	m_Image = p_ForegroundTexture->copyToImage();
@@ -20,7 +20,7 @@ void Terrain::LoadTerrain(sf::Texture* p_ForegroundTexture, sf::Texture* p_Backg
 	m_RenderTexture.create(p_ForegroundTexture->getSize().x, p_ForegroundTexture->getSize().y, false);
 }
 
-sf::Vector2f Terrain::GetNormal(int p_X, int p_Y, int p_Radius)
+sf::Vector2f Terrain::getNormal(int p_X, int p_Y, int p_Radius)
 {
 	sf::Vector2f normal = sf::Vector2f(0.0f, 0.0f);
 	for (int i = -p_Radius; i <= p_Radius; i++) {
@@ -59,7 +59,7 @@ bool Terrain::isPixelEmpty(sf::Vector2i m_Pos)
 	}
 }
 
-void Terrain::SubtractShape(sf::Shape& p_Shape)
+void Terrain::subtractShape(sf::Shape& p_Shape)
 {
 	m_RenderTexture.clear(sf::Color::Transparent);
 	m_RenderTexture.draw(m_Foreground);
