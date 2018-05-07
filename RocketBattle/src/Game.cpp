@@ -164,7 +164,8 @@ void Game::passTurn()
 			m_NextScene = new GameOver(m_WindowSize, "Blue team won", sf::Color::Blue);
 		}
 	} else{
-		if (m_TeamTurn == Teams::red) {
+		if (m_TeamTurn == Teams::red) { //red to blue
+			m_PlayerRocket->setTexture(m_TextureLoader->getTexture("RedRocket.png"));
 			for (int i = m_RocketIndex; i < m_Rockets.size() + 1; i++) {
 				if (i > m_Rockets.size() - 1) {
 					i = 0;
@@ -180,7 +181,8 @@ void Game::passTurn()
 				}
 			}
 		}
-		else if (m_TeamTurn == Teams::blue) {
+		else if (m_TeamTurn == Teams::blue) { //blue to red
+			m_PlayerRocket->setTexture(m_TextureLoader->getTexture("BlueRocket.png"));
 			for (int i = m_RocketIndex; i < m_Rockets.size() + 1; i++) {
 				if (i > m_Rockets.size() - 1) {
 					i = 0;
