@@ -15,7 +15,10 @@ Scene* Scene::getNextScene()
 
 bool Scene::isSceneFinished()
 {
-	return m_SceneFinished;
+	if (m_NextScene != nullptr) {
+		return true;
+	}
+	return false;
 }
 
 bool Scene::getDebug()

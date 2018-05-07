@@ -6,8 +6,9 @@
 class Scene : public sf::Drawable {
 protected:
 	bool m_Debug = false;
-	bool m_SceneFinished = false;
-	Scene* m_NextScene;
+	sf::View m_View;
+	Scene* m_NextScene = nullptr;
+	sf::Vector2u m_WindowSize;
 public:
 	Scene();
 	~Scene();

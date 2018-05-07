@@ -12,7 +12,7 @@ Terrain::~Terrain()
 
 void Terrain::LoadTerrain(sf::Texture* p_ForegroundTexture, sf::Texture* p_BackgroundTexture)
 {
-	m_Texture = p_ForegroundTexture;
+	m_Texture = *p_ForegroundTexture;
 	m_Image = p_ForegroundTexture->copyToImage();
 	m_Background.setTexture(*p_BackgroundTexture);
 	m_Foreground.setTexture(*p_ForegroundTexture);
@@ -66,9 +66,9 @@ void Terrain::SubtractShape(sf::Shape& p_Shape)
 	m_RenderTexture.draw(p_Shape, sf::BlendMultiply);
 	m_RenderTexture.display();
 
-	*m_Texture = m_RenderTexture.getTexture();
-	m_Foreground.setTexture(*m_Texture);
-	m_Image = m_Texture->copyToImage();
+	m_Texture = m_RenderTexture.getTexture();
+	m_Foreground.setTexture(m_Texture);
+	m_Image = m_Texture.copyToImage();
 }
 
 void Terrain::draw(sf::RenderTarget & target, sf::RenderStates states) const

@@ -5,22 +5,20 @@
 #include "Scene.h"
 #include "TextureLoader.h"
 #include "TextButton.h"
-#include "Game.h"
+#include "Menu.h"
 
-class Menu : public Scene {
+class GameOver : public Scene {
 private:
 	sf::Font m_PixelFont;
 	sf::Text m_Title;
-	TextButton* m_StartButton;
-	sf::Sprite m_Hint;
-
+	TextButton* m_MenuButton;
 	sf::Vector2i m_MousePixelPos;
 public:
-	Menu(sf::Vector2u p_WindowSize);
-	~Menu();
+	GameOver(sf::Vector2u p_WindowSize, std::string p_Winner, sf::Color p_Color);
+	~GameOver();
 	void handleKeyboardInput(int key);
 	void handleMouseInput(sf::Mouse::Button button);
-	void handleMouseMove(const sf::RenderWindow& p_Window) ;
+	void handleMouseMove(const sf::RenderWindow& p_Window);
 	void update(float p_TimeStep);
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

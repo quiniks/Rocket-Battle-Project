@@ -14,7 +14,7 @@ int main() {
 
 
 	Scene* l_CurrentScene;
-	l_CurrentScene = new Menu(window);
+	l_CurrentScene = new Menu(window.getSize());
 
 	sf::Clock clock;
 	const unsigned int fps = 60;
@@ -48,11 +48,11 @@ int main() {
 		}
 
 		float elapsedTime = clock.restart().asSeconds();
-		
+
 		if (elapsedTime > 0.25f) {
 			elapsedTime = 0.25f;
 		}
-		
+
 		accumulatedTime += elapsedTime;
 		//std::cout << accumulatedTime << " | " << timeStep << std::endl;
 		while (accumulatedTime >= timeStep) {

@@ -14,7 +14,7 @@
 class Terrain : public sf::Drawable {
 private:
 	sf::Image m_Image;
-	sf::Texture* m_Texture;
+	sf::Texture m_Texture;
 	sf::RenderTexture m_RenderTexture;
 	sf::Sprite m_Foreground;
 	sf::Sprite m_Background;

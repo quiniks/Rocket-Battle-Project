@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\AimLine.cpp" />
+    <ClCompile Include="src\GameOver.cpp" />
     <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="src\Projectile.cpp" />
     <ClCompile Include="src\CollisionHelper.cpp" />
@@ -142,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AimLine.h" />
+    <ClInclude Include="include\GameOver.h" />
     <ClInclude Include="include\Menu.h" />
     <ClInclude Include="include\Projectile.h" />
     <ClInclude Include="include\CollisionHelper.h" />
