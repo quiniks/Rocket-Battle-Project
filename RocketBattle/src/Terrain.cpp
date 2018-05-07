@@ -20,7 +20,7 @@ void Terrain::LoadTerrain(sf::Texture* p_ForegroundTexture, sf::Texture* p_Backg
 	m_RenderTexture.create(p_ForegroundTexture->getSize().x, p_ForegroundTexture->getSize().y, false);
 }
 
-sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius)
+sf::Vector2f Terrain::GetNormal(int p_X, int p_Y, int p_Radius)
 {
 	sf::Vector2f normal = sf::Vector2f(0.0f, 0.0f);
 	for (int i = -p_Radius; i <= p_Radius; i++) {
@@ -28,6 +28,9 @@ sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius
 			if (p_X + i < m_Image.getSize().x && p_Y + j < m_Image.getSize().y) {
 				if (m_Image.getPixel(p_X + i, p_Y + j).a != 0) {
 					normal -= sf::Vector2f((float)i, (float)j);
+				}
+				else if (!(p_X < m_Image.getSize().x && p_X >= 0 && p_Y < m_Image.getSize().y && p_Y >= 0)) {
+					normal += sf::Vector2f((float)i, (float)j);
 				}
 			}
 		}
@@ -41,14 +44,19 @@ sf::Vector2f Terrain::GetNormal(unsigned int p_X, unsigned int p_Y, int p_Radius
 	return normal;
 }
 
-bool Terrain::isPixelEmpty(sf::Vector2u m_Pos)
+bool Terrain::isPixelEmpty(sf::Vector2i m_Pos)
 {
-	if (m_Pos.x < m_Image.getSize().x && m_Pos.y < m_Image.getSize().y) {
+	if (m_Pos.x < m_Image.getSize().x && m_Pos.x >= 0 && m_Pos.y < m_Image.getSize().y && m_Pos.y >= 0) {
 		if (m_Image.getPixel(m_Pos.x, m_Pos.y).a == 0) {
 			return true;
 		}
+		else {
+			return false;
+		}
 	}
-	return false;
+	else {
+		return false;
+	}
 }
 
 void Terrain::SubtractShape(sf::Shape& p_Shape)

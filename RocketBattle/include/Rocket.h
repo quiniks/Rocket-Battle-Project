@@ -15,7 +15,7 @@ protected:
 	float m_LifeBarMaxLength;
 	sf::RectangleShape m_LifeBar;
 	sf::Vector2f m_LifeBarOffset;
-	float m_MaxFuel = 100.0f;
+	float m_MaxFuel = 250.0f;
 	float m_Fuel = 0.0f;
 	float m_FuelBarMaxLength;
 	sf::RectangleShape m_FuelBar;
@@ -28,6 +28,7 @@ public:
 	float getLife();
 	void setFuel(float p_Fuel);
 	float getFuel();
+	int getTeam();
 	float area();
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

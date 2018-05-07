@@ -1,5 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "Game.h"
+#include "Menu.h"
+#include "TextureLoader.h"
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Rocket Battle Project");
@@ -7,7 +9,12 @@ int main() {
 	l_RenderTex.create(window.getSize().x, window.getSize().y);
 	sf::Sprite l_Canvas;
 
-	Game game(window);
+	TextureLoader* l_TextureLoader = TextureLoader::instance();
+	l_TextureLoader->loadTextures(".\\Assets\\Textures");
+
+
+	Scene* l_CurrentScene;
+	l_CurrentScene = new Menu(window);
 
 	sf::Clock clock;
 	const unsigned int fps = 60;
@@ -16,6 +23,12 @@ int main() {
 
 	while (window.isOpen())
 	{
+		if (l_CurrentScene->isSceneFinished()) {
+			Scene* l_NextScene = l_CurrentScene->getNextScene();
+			delete l_CurrentScene;
+			l_CurrentScene = l_NextScene;
+		}
+
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -24,13 +37,11 @@ int main() {
 				window.close();
 				break;
 			case sf::Event::KeyPressed:
-				game.handleKeyboardInput(event.key.code);
+				l_CurrentScene->handleKeyboardInput(event.key.code);
 				break;
 			case sf::Event::MouseButtonPressed:
-				game.handleMouseInput(event.mouseButton.button);
+				l_CurrentScene->handleMouseInput(event.mouseButton.button);
 				break;
-			case sf::Event::MouseMoved:
-				game.handleMouseMove(window);
 			default:
 				break;
 			}
@@ -46,23 +57,26 @@ int main() {
 		//std::cout << accumulatedTime << " | " << timeStep << std::endl;
 		while (accumulatedTime >= timeStep) {
 			//update
-			if (game.getDebug()) {
+			if (l_CurrentScene->getDebug()) {
 				std::cout << "--------------" << std::endl << "render fps: " << 1.0f / elapsedTime << std::endl;
 				std::cout << "physics fps: " << 1.0f / accumulatedTime << std::endl;
 			}
-			game.update(timeStep);
+			l_CurrentScene->handleMouseMove(window);
+			l_CurrentScene->update(timeStep);
 			accumulatedTime -= timeStep;
 		}
 		//render
 		window.clear(sf::Color::Black);
 		l_RenderTex.clear(sf::Color::Transparent);
-		l_RenderTex.draw(game);
+		l_RenderTex.draw(*l_CurrentScene);
 		l_RenderTex.display();
 		const sf::Texture& texture = l_RenderTex.getTexture();
 		l_Canvas.setTexture(texture);
 		window.draw(l_Canvas);
 		window.display();
 	}
+	delete l_CurrentScene;
+	l_CurrentScene = nullptr;
 	//system("pause");
 	return EXIT_SUCCESS;
 }

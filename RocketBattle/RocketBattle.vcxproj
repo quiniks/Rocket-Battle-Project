@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\AimLine.cpp" />
+    <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="src\Projectile.cpp" />
     <ClCompile Include="src\CollisionHelper.cpp" />
     <ClCompile Include="src\DynamicObject.cpp" />
@@ -134,11 +135,14 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Random.cpp" />
     <ClCompile Include="src\Rocket.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\Terrain.cpp" />
+    <ClCompile Include="src\TextButton.cpp" />
     <ClCompile Include="src\TextureLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AimLine.h" />
+    <ClInclude Include="include\Menu.h" />
     <ClInclude Include="include\Projectile.h" />
     <ClInclude Include="include\CollisionHelper.h" />
     <ClInclude Include="include\DynamicObject.h" />
@@ -148,7 +152,9 @@
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\Random.h" />
     <ClInclude Include="include\Rocket.h" />
+    <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Terrain.h" />
+    <ClInclude Include="include\TextButton.h" />
     <ClInclude Include="include\TextureLoader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

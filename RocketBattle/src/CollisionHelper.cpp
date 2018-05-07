@@ -106,7 +106,7 @@ bool CollisionHelper::rayCast(sf::Vector2i p_Start, sf::Vector2i p_Target, Terra
 	int l_PrevX = p_Start.x;
 	int l_PrevY = p_Start.y;
 	for (int pixel = 0; pixel <= l_NumPixels; pixel++) {
-		if (!p_Terrain.isPixelEmpty(sf::Vector2u(l_CurrentX, l_CurrentY))) {
+		if (!p_Terrain.isPixelEmpty(sf::Vector2i(l_CurrentX, l_CurrentY))) {
 			p_hitPos = sf::Vector2i(l_PrevX, l_PrevY); //return prev for point before collision or return current for point of collision
 			return true;
 		}
@@ -130,18 +130,18 @@ bool CollisionHelper::rayCast(sf::Vector2i p_Start, sf::Vector2i p_Target, Terra
 bool CollisionHelper::AABBvsTerrain(sf::FloatRect p_BB, sf::Vector2f p_Pos, Terrain & p_Terrain, sf::Vector2f& p_AverageUnitNormal)
 {
 	//sf::Vector2f l_EdgePixel = sf::Vector2f(0.0f, 0.0f);
-	sf::Vector2u l_TopLeft = (sf::Vector2u)((sf::Vector2i)p_Pos + sf::Vector2i(-p_BB.width / 2, -p_BB.height / 2));
-	sf::Vector2u l_BottomRight = (sf::Vector2u)((sf::Vector2i)p_Pos + sf::Vector2i(p_BB.width / 2, p_BB.height / 2));
+	sf::Vector2i l_TopLeft = (sf::Vector2i)p_Pos + sf::Vector2i(-p_BB.width / 2, -p_BB.height / 2);
+	sf::Vector2i l_BottomRight = (sf::Vector2i)p_Pos + sf::Vector2i(p_BB.width / 2, p_BB.height / 2);
 
 	sf::Vector2f l_SumUnitNormal = sf::Vector2f(0.0f, 0.0f);
 	unsigned int l_Total = 0;
 
 	for (int i = 0; i < p_BB.height; i++) {
 		//top
-		sf::Vector2u l_Top = l_TopLeft + sf::Vector2u(i, 0);
-		sf::Vector2u l_Left= l_TopLeft + sf::Vector2u(0, i);
-		sf::Vector2u l_Bottom = l_BottomRight - sf::Vector2u(i, 0);
-		sf::Vector2u l_Right = l_BottomRight - sf::Vector2u(0, i);
+		sf::Vector2i l_Top = l_TopLeft + sf::Vector2i(i, 0);
+		sf::Vector2i l_Left= l_TopLeft + sf::Vector2i(0, i);
+		sf::Vector2i l_Bottom = l_BottomRight - sf::Vector2i(i, 0);
+		sf::Vector2i l_Right = l_BottomRight - sf::Vector2i(0, i);
 		if (!p_Terrain.isPixelEmpty(l_Top)) {
 			l_SumUnitNormal += p_Terrain.GetNormal(l_Top.x, l_Top.y, 2);
 			l_Total++;

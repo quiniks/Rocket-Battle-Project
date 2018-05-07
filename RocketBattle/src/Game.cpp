@@ -1,21 +1,33 @@
 #include "Game.h"
 
-Game::Game(sf::RenderWindow& p_Window)
+Game::Game()
 {
 	m_View.setCenter(m_CameraSize.x / 2, m_CameraSize.y / 2);
 	m_View.setSize(m_CameraSize.x, m_CameraSize.y);
 	m_View.zoom(1);
-	m_View.move(0.0f, 0.0f);
-	p_Window.setView(m_View);
 
 	m_TextureLoader = TextureLoader::instance();
-	m_TextureLoader->loadTextures(".\\Assets\\Textures");
-	m_Terrain.LoadTerrain(m_TextureLoader->getTexture("testmap2.png"), m_TextureLoader->getTexture("testmap2back.png"));
+	sf::Texture* m_Map = m_TextureLoader->getTexture("CubeMap.png");
+	m_Terrain.LoadTerrain(m_Map, m_TextureLoader->getTexture("CubeMapBack.png"));
+
+	m_MiniView.setSize(m_Map->getSize().x, m_Map->getSize().y);
+	m_MiniView.setCenter(m_Map->getSize().x / 2, m_Map->getSize().y / 2);
+	sf::FloatRect l_MiniMapRect = sf::FloatRect(0.0f, 0.0f, 0.2f, 0.2f);
+	m_MiniView.setViewport(l_MiniMapRect);
+
 	
-	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("RedRocket.png"), 0.5f, sf::Vector2f(30.0f, 35.0f),
-								sf::Vector2f(200.0f, 100.0f), 10.0f, 0.1f, 0.5f, Teams::red));
-	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("BlueRocket.png"), 0.5f, sf::Vector2f(30.0f, 35.0f),
-								sf::Vector2f(500.0f, 100.0f), 10.0f, 0.1f, 0.5f, Teams::blue));
+	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("RedRocket.png"), 0.3f, sf::Vector2f(30.0f, 35.0f),
+		sf::Vector2f(286.0f, 50.0f), 10.0f, 0.01f, 0.5f, Teams::red));
+	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("BlueRocket.png"), 0.3f, sf::Vector2f(30.0f, 35.0f),
+		sf::Vector2f(700.0f, 190.0f), 10.0f, 0.01f, 0.5f, Teams::blue));
+	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("RedRocket.png"), 0.3f, sf::Vector2f(30.0f, 35.0f),
+		sf::Vector2f(1296.0f, 150.0f), 10.0f, 0.01f, 0.5f, Teams::red));
+	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("BlueRocket.png"), 0.3f, sf::Vector2f(30.0f, 35.0f),
+		sf::Vector2f(300.0f, 550.0f), 10.0f, 0.01f, 0.5f, Teams::blue));
+	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("RedRocket.png"), 0.3f, sf::Vector2f(30.0f, 35.0f),
+		sf::Vector2f(1050.0f, 550.0f), 10.0f, 0.01f, 0.5f, Teams::red));
+	m_Rockets.push_back(Rocket(m_TextureLoader->getTexture("BlueRocket.png"), 0.3f, sf::Vector2f(30.0f, 35.0f),
+		sf::Vector2f(1460.0f, 557.0f), 10.0f, 0.01f, 0.5f, Teams::blue));
 	m_PlayerRocket = &m_Rockets.at(m_Turn);
 }
 
@@ -35,49 +47,103 @@ void Game::handleKeyboardInput(int key)
 void Game::handleMouseInput(sf::Mouse::Button button)
 {
 	if (button == sf::Mouse::Left) {
-		m_Bullets.push_back(Projectile(m_TextureLoader->getTexture("Bullet.png"), 0.0f, sf::Vector2f(7.0f, 7.0f), m_PlayerRocket->getPosition(), 0.1f, 5.0f, 0.0f, 50.0f));
-		sf::Vector2f l_InitialVel = m_AimLine.getMultiplier() * 200.0f * m_AimLine.getDirUnit();
-		m_Bullets.back().setVelocity(l_InitialVel);
+		if (m_bHasShot == false) {
+			m_bHasShot = true;
+			m_Bullets.push_back(Projectile(m_TextureLoader->getTexture("Bullet.png"), 0.0f, sf::Vector2f(7.0f, 7.0f), m_PlayerRocket->getPosition(), 0.1f, 5.0f, 0.0f, 50.0f));
+			sf::Vector2f l_InitialVel = m_AimLine.getMultiplier() * 100.0f * m_AimLine.getDirUnit();
+			m_Bullets.back().setVelocity(l_InitialVel);
+		}
 	}
 }
 
 void Game::handleMouseMove(const sf::RenderWindow& p_Window)
 {
 	sf::Vector2i p_MousePixelPos = sf::Mouse::getPosition(p_Window);
-	m_MouseWorldPos = p_Window.mapPixelToCoords(p_MousePixelPos);
+	m_MouseWorldPos = p_Window.mapPixelToCoords(p_MousePixelPos, m_View);
 }
 
 void Game::handleInputPerUpdate()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-		if (m_PlayerRocket->getFuel() > 0.0f) {
-			m_PlayerRocket->applyForce(sf::Vector2f(0.0f, -1000000.0f));
-			m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+		if (m_Rockets.size() != 0) {
+			if (m_PlayerRocket->getFuel() > 0.0f) {
+				m_bMoving = true;
+				m_PlayerRocket->applyForce(sf::Vector2f(0.0f, -1000000.0f));
+				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+			}
 		}
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-		if (m_PlayerRocket->getFuel() > 0.0f) {
-			m_PlayerRocket->applyForce(sf::Vector2f(-1000000.0f, 0.0f));
-			m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+		if (m_Rockets.size() != 0) {
+			if (m_PlayerRocket->getFuel() > 0.0f) {
+				m_bMoving = true;
+				m_PlayerRocket->applyForce(sf::Vector2f(-1000000.0f, 0.0f));
+				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+			}
 		}
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-		if (m_PlayerRocket->getFuel() > 0.0f) {
-			m_PlayerRocket->applyForce(sf::Vector2f(0.0f, 1000000.0f));
-			m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+		if (m_Rockets.size() != 0) {
+			if (m_PlayerRocket->getFuel() > 0.0f) {
+				m_bMoving = true;
+				m_PlayerRocket->applyForce(sf::Vector2f(0.0f, 1000000.0f));
+				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+			}
 		}
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		if (m_PlayerRocket->getFuel() > 0.0f) {
-			m_PlayerRocket->applyForce(sf::Vector2f(1000000.0f, 0.0f));
-			m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+		if (m_Rockets.size() != 0) {
+			if (m_PlayerRocket->getFuel() > 0.0f) {
+				m_bMoving = true;
+				m_PlayerRocket->applyForce(sf::Vector2f(1000000.0f, 0.0f));
+				m_PlayerRocket->setFuel(m_PlayerRocket->getFuel() - 0.3f);
+			}
 		}
 	}
+}
+
+void Game::passTurn()
+{
+	if (m_Turn >= m_Rockets.size() - 1) {
+		m_Turn = 0;
+	}
+	else {
+		m_Turn++;
+	}
+	if (m_Rockets.size() != 0){
+		m_PlayerRocket = &m_Rockets.at(m_Turn);
+	}
+	m_bHasShot = false;
 }
 
 void Game::update(float p_TimeStep)
 {
 	handleInputPerUpdate();
+	if (!m_bHasShot) {
+		m_View.setCenter(m_PlayerRocket->getPosition());
+	}
+	else {
+		m_View.setCenter(m_Bullets.at(0).getPosition());
+	}
+
+	if (m_bMoving) {
+		if (m_PlayerRocket->getTeam() == Teams::red) {
+			m_PlayerRocket->setTexture(m_TextureLoader->getTexture("RedRocketThrust.png"));
+		}
+		else if (m_PlayerRocket->getTeam() == Teams::blue) {
+			m_PlayerRocket->setTexture(m_TextureLoader->getTexture("BlueRocketThrust.png"));
+		}
+	}
+	else {
+		if (m_PlayerRocket->getTeam() == Teams::red) {
+			m_PlayerRocket->setTexture(m_TextureLoader->getTexture("RedRocket.png"));
+		}
+		else if (m_PlayerRocket->getTeam() == Teams::blue) {
+			m_PlayerRocket->setTexture(m_TextureLoader->getTexture("BlueRocket.png"));
+		}
+	}
+	m_bMoving = false;
+
 	m_AimLine.update(m_MouseWorldPos, m_PlayerRocket->getPosition());
 
 	if (m_Debug) {
@@ -107,7 +173,7 @@ void Game::update(float p_TimeStep)
 					}
 				}
 			}
-
+			passTurn();
 			m_ParticleSystem.Explosion(l_Bullet.getPosition(), m_Gravity, 50.0f, 100, 20.0f, 0.3f, 2.0f, 0.001f);
 			m_Bullets.erase(m_Bullets.begin() + i);
 			i--;
@@ -137,6 +203,7 @@ void Game::update(float p_TimeStep)
 				l_Circle.setFillColor(sf::Color::Transparent);
 				m_Terrain.SubtractShape(l_Circle);
 
+				passTurn();
 				m_ParticleSystem.Explosion(l_Bullet.getPosition(), m_Gravity, 50.0f, 100, 20.0f, 0.3f, 2.0f, 0.001f);
 				m_Bullets.erase(m_Bullets.begin() + j);
 				j--;
@@ -145,7 +212,7 @@ void Game::update(float p_TimeStep)
 	}
 	for (int i = 0; i < m_ParticleSystem.size(); i++) {
 		Particle& l_Particle = m_ParticleSystem.getParticle(i);
-		if (!m_Terrain.isPixelEmpty((sf::Vector2u)l_Particle.getPosition())) {
+		if (!m_Terrain.isPixelEmpty((sf::Vector2i)l_Particle.getPosition())) {
 			//dyn l_Particle has collided with terrain
 			sf::Vector2i l_ColPos = sf::Vector2i(0, 0);
 			bool l_Hit = CollisionHelper::rayCast((sf::Vector2i)l_Particle.getLastPos(), (sf::Vector2i)l_Particle.getPosition(), m_Terrain, l_ColPos);
@@ -159,6 +226,8 @@ void Game::update(float p_TimeStep)
 
 void Game::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
+	//DRAW GAME
+	target.setView(m_View);
 	target.draw(m_Terrain);
 	target.draw(m_AimLine);
 	for (int i = 0; i < m_Rockets.size(); i++) {
@@ -168,9 +237,10 @@ void Game::draw(sf::RenderTarget & target, sf::RenderStates states) const
 		target.draw(m_Bullets.at(i));
 	}
 	target.draw(m_ParticleSystem);
-}
-
-bool Game::getDebug()
-{
-	return m_Debug;
+	//DRAW MINI MAP
+	target.setView(m_MiniView);
+	target.draw(m_Terrain);
+	for (int i = 0; i < m_Rockets.size(); i++) {
+		target.draw(m_Rockets.at(i));
+	}
 }

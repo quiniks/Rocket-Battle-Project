@@ -65,6 +65,11 @@ float Rocket::getFuel()
 	return m_Fuel;
 }
 
+int Rocket::getTeam()
+{
+	return m_Team;
+}
+
 float Rocket::area()
 {
 	return (m_BoundingBox.width * m_BoundingBox.height);
