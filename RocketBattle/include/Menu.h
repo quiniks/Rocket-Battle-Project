@@ -13,14 +13,11 @@ private:
 	sf::Text m_Title;
 	TextButton* m_StartButton;
 	sf::Sprite m_Hint;
-
-	sf::Vector2i m_MousePixelPos;
 public:
 	Menu(sf::Vector2u p_WindowSize);
 	~Menu();
 	void handleKeyboardInput(int key);
 	void handleMouseInput(sf::Mouse::Button button);
-	void handleMouseMove(const sf::RenderWindow& p_Window) ;
 	void update(float p_TimeStep);
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

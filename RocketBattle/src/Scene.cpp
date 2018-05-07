@@ -8,6 +8,12 @@ Scene::~Scene()
 {
 }
 
+void Scene::handleMouseMove(const sf::RenderWindow & p_Window)
+{
+	sf::Vector2i p_MousePixelPos = sf::Mouse::getPosition(p_Window);
+	m_MouseWorldPos = p_Window.mapPixelToCoords(p_MousePixelPos, m_View);
+}
+
 Scene* Scene::getNextScene()
 {
 	return m_NextScene;

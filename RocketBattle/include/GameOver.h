@@ -12,13 +12,11 @@ private:
 	sf::Font m_PixelFont;
 	sf::Text m_Title;
 	TextButton* m_MenuButton;
-	sf::Vector2i m_MousePixelPos;
 public:
 	GameOver(sf::Vector2u p_WindowSize, std::string p_Winner, sf::Color p_Color);
 	~GameOver();
 	void handleKeyboardInput(int key);
 	void handleMouseInput(sf::Mouse::Button button);
-	void handleMouseMove(const sf::RenderWindow& p_Window);
 	void update(float p_TimeStep);
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

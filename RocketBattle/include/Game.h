@@ -29,7 +29,6 @@ private:
 	int m_State = running;
 
 	sf::Vector2f m_Gravity = sf::Vector2f(0.0f, 9.81f);
-	sf::Vector2f m_MouseWorldPos;
 
 	enum  Teams { neutral, red, blue };
 	int m_RocketIndex = 0;
@@ -54,7 +53,6 @@ public:
 	~Game();
 	void handleKeyboardInput(int key);
 	void handleMouseInput(sf::Mouse::Button button);
-	void handleMouseMove(const sf::RenderWindow& p_Window);
 	void update(float p_TimeStep);
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

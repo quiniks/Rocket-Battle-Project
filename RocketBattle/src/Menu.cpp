@@ -36,20 +36,15 @@ void Menu::handleKeyboardInput(int key)
 void Menu::handleMouseInput(sf::Mouse::Button button)
 {
 	if (button == sf::Mouse::Left) {
-		if (m_StartButton->isMouseOver((sf::Vector2f)m_MousePixelPos)) {
+		if (m_StartButton->isMouseOver(m_MouseWorldPos)) {
 			m_NextScene = new Game(m_WindowSize);
 		}
 	}
 }
 
-void Menu::handleMouseMove(const sf::RenderWindow & p_Window)
-{
-	m_MousePixelPos = sf::Mouse::getPosition(p_Window);
-}
-
 void Menu::update(float p_TimeStep)
 {
-	m_StartButton->update((sf::Vector2f)m_MousePixelPos);
+	m_StartButton->update(m_MouseWorldPos);
 }
 
 

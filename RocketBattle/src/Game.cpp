@@ -83,12 +83,6 @@ void Game::handleMouseInput(sf::Mouse::Button button)
 	}
 }
 
-void Game::handleMouseMove(const sf::RenderWindow& p_Window)
-{
-	sf::Vector2i p_MousePixelPos = sf::Mouse::getPosition(p_Window);
-	m_MouseWorldPos = p_Window.mapPixelToCoords(p_MousePixelPos, m_View);
-}
-
 void Game::handleInputPerUpdate()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
@@ -321,12 +315,12 @@ void Game::draw(sf::RenderTarget & target, sf::RenderStates states) const
 	//DRAW GAME
 	target.setView(m_View);
 	target.draw(m_Terrain);
+	for (int i = 0; i < m_Bullets.size(); i++) {
+		target.draw(m_Bullets.at(i));
+	}
 	target.draw(m_AimLine);
 	for (int i = 0; i < m_Rockets.size(); i++) {
 		target.draw(m_Rockets.at(i));
-	}
-	for (int i = 0; i < m_Bullets.size(); i++) {
-		target.draw(m_Bullets.at(i));
 	}
 	target.draw(m_ParticleSystem);
 	if (m_State == State::paused) {

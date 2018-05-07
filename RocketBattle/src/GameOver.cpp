@@ -32,20 +32,15 @@ void GameOver::handleKeyboardInput(int key)
 void GameOver::handleMouseInput(sf::Mouse::Button button)
 {
 	if (button == sf::Mouse::Left) {
-		if (m_MenuButton->isMouseOver((sf::Vector2f)m_MousePixelPos)) {
+		if (m_MenuButton->isMouseOver(m_MouseWorldPos)) {
 			m_NextScene = new Menu(m_WindowSize);
 		}
 	}
 }
 
-void GameOver::handleMouseMove(const sf::RenderWindow & p_Window)
-{
-	m_MousePixelPos = sf::Mouse::getPosition(p_Window);
-}
-
 void GameOver::update(float p_TimeStep)
 {
-	m_MenuButton->update((sf::Vector2f)m_MousePixelPos);
+	m_MenuButton->update(m_MouseWorldPos);
 }
 
 void GameOver::draw(sf::RenderTarget & target, sf::RenderStates states) const
