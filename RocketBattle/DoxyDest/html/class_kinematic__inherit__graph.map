@@ -1,0 +1,6 @@
+<map id="Kinematic" name="Kinematic">
+<area shape="rect" id="node3" href="$class_dynamic_object.html" title="A kinematic rectangle that can be affected by forces. " alt="" coords="79,155,190,181"/>
+<area shape="rect" id="node4" href="$class_particle.html" title="A dynamic object that keeps track of how long it exists for and its previous position. " alt="" coords="5,229,72,256"/>
+<area shape="rect" id="node5" href="$class_projectile.html" title="A dynamic object that has damage. " alt="" coords="97,229,173,256"/>
+<area shape="rect" id="node6" href="$class_rocket.html" title="A playable rocket class that keeps track of fuel and life. " alt="" coords="197,229,259,256"/>
+</map>

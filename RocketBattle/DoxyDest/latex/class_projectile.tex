@@ -1,0 +1,111 @@
+\hypertarget{class_projectile}{}\section{Projectile Class Reference}
+\label{class_projectile}\index{Projectile@{Projectile}}
+
+
+A dynamic object that has damage.  
+
+
+
+
+{\ttfamily \#include $<$Projectile.\+h$>$}
+
+
+
+Inheritance diagram for Projectile\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_projectile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Projectile\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_projectile__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_projectile_a5ed941ee600a7455a2c91fbacec4857e}{Projectile} (sf\+::\+Texture $\ast$p\+\_\+\+Texture, float p\+\_\+\+Restitution, sf\+::\+Vector2f p\+\_\+\+Size, sf\+::\+Vector2f p\+\_\+\+Start\+Pos, float p\+\_\+\+Density, float p\+\_\+\+Drag\+Co, float p\+\_\+\+Fric\+Co, float p\+\_\+\+Damage)
+\item 
+\mbox{\Hypertarget{class_projectile_a94903e021fa2edab60ba3836ca0b937d}\label{class_projectile_a94903e021fa2edab60ba3836ca0b937d}} 
+\hyperlink{class_projectile_a94903e021fa2edab60ba3836ca0b937d}{$\sim$\+Projectile} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projectile_a69b205e012801b3b7b146790ededd8d6}\label{class_projectile_a69b205e012801b3b7b146790ededd8d6}} 
+float \hyperlink{class_projectile_a69b205e012801b3b7b146790ededd8d6}{area} ()
+\begin{DoxyCompactList}\small\item\em Return area. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projectile_aad46fba4622a73c53b933486e60bf841}\label{class_projectile_aad46fba4622a73c53b933486e60bf841}} 
+float \hyperlink{class_projectile_aad46fba4622a73c53b933486e60bf841}{get\+Damage} ()
+\begin{DoxyCompactList}\small\item\em Get damage value. \end{DoxyCompactList}\item 
+void \hyperlink{class_projectile_ac61792f1670310d35ecec906ab5ada9d}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_projectile_a96e6a3198e2a1561ff4b7eaa3e19a378}\label{class_projectile_a96e6a3198e2a1561ff4b7eaa3e19a378}} 
+sf\+::\+Sprite \hyperlink{class_projectile_a96e6a3198e2a1561ff4b7eaa3e19a378}{m\+\_\+\+Sprite}
+\begin{DoxyCompactList}\small\item\em Sprite to draw projectile texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_projectile_ada5ceb970f091739251d7ae10b94d159}\label{class_projectile_ada5ceb970f091739251d7ae10b94d159}} 
+float \hyperlink{class_projectile_ada5ceb970f091739251d7ae10b94d159}{m\+\_\+\+Damage}
+\begin{DoxyCompactList}\small\item\em Damage value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A dynamic object that has damage. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projectile_a5ed941ee600a7455a2c91fbacec4857e}\label{class_projectile_a5ed941ee600a7455a2c91fbacec4857e}} 
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\subsubsection{\texorpdfstring{Projectile()}{Projectile()}}
+{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{p\+\_\+\+Texture,  }\item[{float}]{p\+\_\+\+Restitution,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Size,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Start\+Pos,  }\item[{float}]{p\+\_\+\+Density,  }\item[{float}]{p\+\_\+\+Drag\+Co,  }\item[{float}]{p\+\_\+\+Fric\+Co,  }\item[{float}]{p\+\_\+\+Damage }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Texture} & Initial texture \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Restitution} & Intial bounciness \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Size} & Initial size of the the axis aligned bounding box \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Start\+Pos} & Initial position of the rocket \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Density} & Initial density \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Drag\+Co} & Intial drag coefficient \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Fric\+Co} & Intial friction coefficient \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Damage} & Initial damage value \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projectile_ac61792f1670310d35ecec906ab5ada9d}\label{class_projectile_ac61792f1670310d35ecec906ab5ada9d}} 
+\index{Projectile@{Projectile}!draw@{draw}}
+\index{draw@{draw}!Projectile@{Projectile}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Projectile\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_kinematic_a5d403bfe970efc1f0cebc872e3e2898b}{Kinematic}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_projectile_8h}{Projectile.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{class_random}{}\section{Random Class Reference}
+\label{class_random}\index{Random@{Random}}
+
+
+Singleton class that holds random number engines.  
+
+
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_random_a00363b48c0e54b490a11957a40200bad}{get\+Rand} (float p\+\_\+\+Min, float p\+\_\+\+Max)
+\item 
+\mbox{\Hypertarget{class_random_a649b59f8ec026bdc1ec5aab2d8d5f98e}\label{class_random_a649b59f8ec026bdc1ec5aab2d8d5f98e}} 
+\hyperlink{class_random_a649b59f8ec026bdc1ec5aab2d8d5f98e}{Random} (\hyperlink{class_random}{Random} const \&)=delete
+\begin{DoxyCompactList}\small\item\em prevents the creation of multiple texture loaders \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_random_a1ba4b35433055f747ac97d847d39d7a4}\label{class_random_a1ba4b35433055f747ac97d847d39d7a4}} 
+\hyperlink{class_random}{Random} \& \hyperlink{class_random_a1ba4b35433055f747ac97d847d39d7a4}{operator=} (\hyperlink{class_random}{Random} const \&)=delete
+\begin{DoxyCompactList}\small\item\em prevents the creation of multiple texture loaders \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_random_a562d087178f9a4d17c5c034561774797}\label{class_random_a562d087178f9a4d17c5c034561774797}} 
+static \hyperlink{class_random}{Random} $\ast$ \hyperlink{class_random_a562d087178f9a4d17c5c034561774797}{instance} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the static texture loader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singleton class that holds random number engines. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_random_a00363b48c0e54b490a11957a40200bad}\label{class_random_a00363b48c0e54b490a11957a40200bad}} 
+\index{Random@{Random}!get\+Rand@{get\+Rand}}
+\index{get\+Rand@{get\+Rand}!Random@{Random}}
+\subsubsection{\texorpdfstring{get\+Rand()}{getRand()}}
+{\footnotesize\ttfamily float Random\+::get\+Rand (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Min,  }\item[{float}]{p\+\_\+\+Max }\end{DoxyParamCaption})}
+
+Get random number between a min and max inclusive 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Min} & Minimum value \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Max} & Maximum value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_random_8h}{Random.\+h}\end{DoxyCompactItemize}

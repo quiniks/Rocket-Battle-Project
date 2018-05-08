@@ -8,7 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-/* \class TextButton
+/*! \class TextButton
 \brief A Wrapper class for sf::Text and sf::Font that adds a mosue over checker
 */
 

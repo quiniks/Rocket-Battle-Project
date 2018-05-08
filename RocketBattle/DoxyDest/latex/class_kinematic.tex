@@ -1,0 +1,159 @@
+\hypertarget{class_kinematic}{}\section{Kinematic Class Reference}
+\label{class_kinematic}\index{Kinematic@{Kinematic}}
+
+
+A class that provides methods to create motion using position, velocity and acceleration.  
+
+
+
+
+{\ttfamily \#include $<$Kinematic.\+h$>$}
+
+
+
+Inheritance diagram for Kinematic\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_kinematic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kinematic\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_kinematic__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinematic_a0265e971c0ac4a847df7d625553becc2}\label{class_kinematic_a0265e971c0ac4a847df7d625553becc2}} 
+\hyperlink{class_kinematic_a0265e971c0ac4a847df7d625553becc2}{Kinematic} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_ad2e5f972b7bd6e6919473f5fd38cf355}\label{class_kinematic_ad2e5f972b7bd6e6919473f5fd38cf355}} 
+\hyperlink{class_kinematic_ad2e5f972b7bd6e6919473f5fd38cf355}{$\sim$\+Kinematic} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a19b6a52bb1017eb04b8f6d1b349ee00f}\label{class_kinematic_a19b6a52bb1017eb04b8f6d1b349ee00f}} 
+sf\+::\+Vector2f \hyperlink{class_kinematic_a19b6a52bb1017eb04b8f6d1b349ee00f}{get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Get current position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a4bddbed2a08c93538ef982b6420f39c6}\label{class_kinematic_a4bddbed2a08c93538ef982b6420f39c6}} 
+sf\+::\+Vector2f \hyperlink{class_kinematic_a4bddbed2a08c93538ef982b6420f39c6}{get\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Get current velocity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a4ff84ca5c4d11dae399ea8abc8b25e69}\label{class_kinematic_a4ff84ca5c4d11dae399ea8abc8b25e69}} 
+sf\+::\+Vector2f \hyperlink{class_kinematic_a4ff84ca5c4d11dae399ea8abc8b25e69}{get\+Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Get current acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a477df46feabc6a17eaae68f860b23e07}\label{class_kinematic_a477df46feabc6a17eaae68f860b23e07}} 
+float \hyperlink{class_kinematic_a477df46feabc6a17eaae68f860b23e07}{get\+Angular\+Vel} ()
+\begin{DoxyCompactList}\small\item\em Get current angular velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_kinematic_acca21f5a492ef8cea9aa168e2bd1aada}{apply\+Acceleration} (sf\+::\+Vector2f p\+\_\+\+Acceleration)
+\item 
+void \hyperlink{class_kinematic_afcf0ed9a3b711fd149cb64cc66711c6c}{set\+Position} (sf\+::\+Vector2f p\+\_\+\+Position)
+\item 
+void \hyperlink{class_kinematic_ad32a87fafb92696178ec3edf69b4657c}{set\+Velocity} (sf\+::\+Vector2f p\+\_\+\+Velocity)
+\item 
+void \hyperlink{class_kinematic_aafc7bfadfcbbfe84d58162063f0ae94a}{poly\+Update} (float p\+\_\+\+Delta\+Time)
+\item 
+virtual void \hyperlink{class_kinematic_a5d403bfe970efc1f0cebc872e3e2898b}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinematic_a99f7c1c609633a7bd5970d5a4f7e7c51}\label{class_kinematic_a99f7c1c609633a7bd5970d5a4f7e7c51}} 
+virtual void \hyperlink{class_kinematic_a99f7c1c609633a7bd5970d5a4f7e7c51}{update} ()=0
+\begin{DoxyCompactList}\small\item\em late binding update function to update child objects \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_kinematic_aa25918dd272373d7ae0451d3b660feb7}\label{class_kinematic_aa25918dd272373d7ae0451d3b660feb7}} 
+sf\+::\+Vector2f \hyperlink{class_kinematic_aa25918dd272373d7ae0451d3b660feb7}{m\+\_\+\+Position} = sf\+::\+Vector2f(0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em Position of object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a73a21594befb8538e7de53f53dc52be6}\label{class_kinematic_a73a21594befb8538e7de53f53dc52be6}} 
+sf\+::\+Vector2f \hyperlink{class_kinematic_a73a21594befb8538e7de53f53dc52be6}{m\+\_\+\+Velocity} = sf\+::\+Vector2f(0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em Velocity of object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a30a099a276dbd1aee8f0ef20a63193dc}\label{class_kinematic_a30a099a276dbd1aee8f0ef20a63193dc}} 
+sf\+::\+Vector2f \hyperlink{class_kinematic_a30a099a276dbd1aee8f0ef20a63193dc}{m\+\_\+\+Acceleration} = sf\+::\+Vector2f(0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em Acceleration of object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a3148fd60ff6257f32a6e3d7042d535d5}\label{class_kinematic_a3148fd60ff6257f32a6e3d7042d535d5}} 
+float \hyperlink{class_kinematic_a3148fd60ff6257f32a6e3d7042d535d5}{m\+\_\+\+Rotation} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Rotation of object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_afc52c98bc512eef24a46fc29fe6fd012}\label{class_kinematic_afc52c98bc512eef24a46fc29fe6fd012}} 
+float \hyperlink{class_kinematic_afc52c98bc512eef24a46fc29fe6fd012}{m\+\_\+\+Angular\+Velocity} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Angular velocity of object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_kinematic_a2f934f9423f65affa32479958694e4ad}\label{class_kinematic_a2f934f9423f65affa32479958694e4ad}} 
+float \hyperlink{class_kinematic_a2f934f9423f65affa32479958694e4ad}{m\+\_\+\+Angular\+Acceleration} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Angular acceleration Rotation of object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that provides methods to create motion using position, velocity and acceleration. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_kinematic_acca21f5a492ef8cea9aa168e2bd1aada}\label{class_kinematic_acca21f5a492ef8cea9aa168e2bd1aada}} 
+\index{Kinematic@{Kinematic}!apply\+Acceleration@{apply\+Acceleration}}
+\index{apply\+Acceleration@{apply\+Acceleration}!Kinematic@{Kinematic}}
+\subsubsection{\texorpdfstring{apply\+Acceleration()}{applyAcceleration()}}
+{\footnotesize\ttfamily void Kinematic\+::apply\+Acceleration (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Acceleration }\end{DoxyParamCaption})}
+
+Apply an acceleration 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Acceleration} & Acceleration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_kinematic_a5d403bfe970efc1f0cebc872e3e2898b}\label{class_kinematic_a5d403bfe970efc1f0cebc872e3e2898b}} 
+\index{Kinematic@{Kinematic}!draw@{draw}}
+\index{draw@{draw}!Kinematic@{Kinematic}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Kinematic\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_rocket_a4b83a058408ee42ea77248dd8f0d3339}{Rocket}, \hyperlink{class_particle_a57316a997dbf6b060ec989c059ba9616}{Particle}, and \hyperlink{class_projectile_ac61792f1670310d35ecec906ab5ada9d}{Projectile}.
+
+\mbox{\Hypertarget{class_kinematic_aafc7bfadfcbbfe84d58162063f0ae94a}\label{class_kinematic_aafc7bfadfcbbfe84d58162063f0ae94a}} 
+\index{Kinematic@{Kinematic}!poly\+Update@{poly\+Update}}
+\index{poly\+Update@{poly\+Update}!Kinematic@{Kinematic}}
+\subsubsection{\texorpdfstring{poly\+Update()}{polyUpdate()}}
+{\footnotesize\ttfamily void Kinematic\+::poly\+Update (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Delta\+Time }\end{DoxyParamCaption})}
+
+Update function that calls the child\textquotesingle{}s update function, intergrates and resets acceleration to 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Delta\+Time} & elapsed time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_kinematic_afcf0ed9a3b711fd149cb64cc66711c6c}\label{class_kinematic_afcf0ed9a3b711fd149cb64cc66711c6c}} 
+\index{Kinematic@{Kinematic}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Kinematic@{Kinematic}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Kinematic\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Position }\end{DoxyParamCaption})}
+
+Set position 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Position} & position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_kinematic_ad32a87fafb92696178ec3edf69b4657c}\label{class_kinematic_ad32a87fafb92696178ec3edf69b4657c}} 
+\index{Kinematic@{Kinematic}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Kinematic@{Kinematic}}
+\subsubsection{\texorpdfstring{set\+Velocity()}{setVelocity()}}
+{\footnotesize\ttfamily void Kinematic\+::set\+Velocity (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Velocity }\end{DoxyParamCaption})}
+
+Set velocity 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Velocity} & velocity \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_kinematic_8h}{Kinematic.\+h}\end{DoxyCompactItemize}

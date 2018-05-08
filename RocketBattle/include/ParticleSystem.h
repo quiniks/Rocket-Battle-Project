@@ -10,7 +10,7 @@
 #include "Random.h"
 #include "CollisionHelper.h"
 
-/* \class ParticleSystem
+/*! \class ParticleSystem
 \brief A class that handles updating particles and drawing their respective vertices
 */
 

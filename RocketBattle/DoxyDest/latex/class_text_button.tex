@@ -1,0 +1,124 @@
+\hypertarget{class_text_button}{}\section{Text\+Button Class Reference}
+\label{class_text_button}\index{Text\+Button@{Text\+Button}}
+
+
+A Wrapper class for sf\+::\+Text and sf\+::\+Font that adds a mosue over checker.  
+
+
+
+
+{\ttfamily \#include $<$Text\+Button.\+h$>$}
+
+
+
+Inheritance diagram for Text\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_text_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Text\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_text_button__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_text_button_a03347de6b8c774f7a78a8ce6bbab10fc}{Text\+Button} (sf\+::\+Font p\+\_\+\+Font, std\+::string p\+\_\+\+String, float p\+\_\+\+Char\+Size, sf\+::\+Color p\+\_\+\+Base\+Color, sf\+::\+Color p\+\_\+\+Over\+Color)
+\item 
+\mbox{\Hypertarget{class_text_button_a497a17bb110e249c7eb88a98dad12192}\label{class_text_button_a497a17bb110e249c7eb88a98dad12192}} 
+\hyperlink{class_text_button_a497a17bb110e249c7eb88a98dad12192}{$\sim$\+Text\+Button} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_text_button_a8a9500a6a76540c73a15ff3a4ceca08a}{set\+Position} (sf\+::\+Vector2f p\+\_\+\+Position)
+\item 
+void \hyperlink{class_text_button_a255b855a91d7e488fa674abaf302edbb}{update} (sf\+::\+Vector2f p\+\_\+\+Mouse\+Pos)
+\item 
+bool \hyperlink{class_text_button_a10d99e4de442f5c2bb72ab6b9938813f}{is\+Mouse\+Over} (sf\+::\+Vector2f p\+\_\+\+Mouse\+Pos)
+\item 
+void \hyperlink{class_text_button_a8b52953d08ee55b437c97843628774c8}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Wrapper class for sf\+::\+Text and sf\+::\+Font that adds a mosue over checker. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_text_button_a03347de6b8c774f7a78a8ce6bbab10fc}\label{class_text_button_a03347de6b8c774f7a78a8ce6bbab10fc}} 
+\index{Text\+Button@{Text\+Button}!Text\+Button@{Text\+Button}}
+\index{Text\+Button@{Text\+Button}!Text\+Button@{Text\+Button}}
+\subsubsection{\texorpdfstring{Text\+Button()}{TextButton()}}
+{\footnotesize\ttfamily Text\+Button\+::\+Text\+Button (\begin{DoxyParamCaption}\item[{sf\+::\+Font}]{p\+\_\+\+Font,  }\item[{std\+::string}]{p\+\_\+\+String,  }\item[{float}]{p\+\_\+\+Char\+Size,  }\item[{sf\+::\+Color}]{p\+\_\+\+Base\+Color,  }\item[{sf\+::\+Color}]{p\+\_\+\+Over\+Color }\end{DoxyParamCaption})}
+
+Constructor with initial values 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Font} & The font to use \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+String} & The string to be displayed \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Char\+Size} & Character size \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Base\+Color} & Default color \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Over\+Color} & Mouse over color \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_button_a8b52953d08ee55b437c97843628774c8}\label{class_text_button_a8b52953d08ee55b437c97843628774c8}} 
+\index{Text\+Button@{Text\+Button}!draw@{draw}}
+\index{draw@{draw}!Text\+Button@{Text\+Button}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Text\+Button\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_button_a10d99e4de442f5c2bb72ab6b9938813f}\label{class_text_button_a10d99e4de442f5c2bb72ab6b9938813f}} 
+\index{Text\+Button@{Text\+Button}!is\+Mouse\+Over@{is\+Mouse\+Over}}
+\index{is\+Mouse\+Over@{is\+Mouse\+Over}!Text\+Button@{Text\+Button}}
+\subsubsection{\texorpdfstring{is\+Mouse\+Over()}{isMouseOver()}}
+{\footnotesize\ttfamily bool Text\+Button\+::is\+Mouse\+Over (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Mouse\+Pos }\end{DoxyParamCaption})}
+
+Check if mouse is over the text button 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Mouse\+Pos} & The current position of the mouse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_button_a8a9500a6a76540c73a15ff3a4ceca08a}\label{class_text_button_a8a9500a6a76540c73a15ff3a4ceca08a}} 
+\index{Text\+Button@{Text\+Button}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Text\+Button@{Text\+Button}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Text\+Button\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Position }\end{DoxyParamCaption})}
+
+Set the position of the text 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Position} & Chosen position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_button_a255b855a91d7e488fa674abaf302edbb}\label{class_text_button_a255b855a91d7e488fa674abaf302edbb}} 
+\index{Text\+Button@{Text\+Button}!update@{update}}
+\index{update@{update}!Text\+Button@{Text\+Button}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Text\+Button\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Mouse\+Pos }\end{DoxyParamCaption})}
+
+Update the buttons color based on mouse position 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Mouse\+Pos} & The current position of the mouse \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_text_button_8h}{Text\+Button.\+h}\end{DoxyCompactItemize}

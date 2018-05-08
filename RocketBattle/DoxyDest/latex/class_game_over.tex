@@ -1,0 +1,134 @@
+\hypertarget{class_game_over}{}\section{Game\+Over Class Reference}
+\label{class_game_over}\index{Game\+Over@{Game\+Over}}
+
+
+A menu scene that displays some useful info and allows you to start the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Over.\+h$>$}
+
+
+
+Inheritance diagram for Game\+Over\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{class_game_over__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Over\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_game_over__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_over_a03eea2a6051e37b40465cac9377fa7ec}{Game\+Over} (sf\+::\+Vector2u p\+\_\+\+Window\+Size, std\+::string p\+\_\+\+Winner, sf\+::\+Color p\+\_\+\+Color)
+\item 
+void \hyperlink{class_game_over_aae04263371e8f82199df51de54ef77d1}{handle\+Keyboard\+Input} (int p\+\_\+\+Key)
+\item 
+void \hyperlink{class_game_over_a83c0cecb3faab5ea8c36272e931006f7}{handle\+Mouse\+Input} (sf\+::\+Mouse\+::\+Button p\+\_\+\+Button)
+\item 
+void \hyperlink{class_game_over_a6b9465b5c095a1de0e467baf17045fac}{update} (float p\+\_\+\+Time\+Step)
+\item 
+void \hyperlink{class_game_over_a4792ee9e2b587f98576a8023d34f5f5c}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A menu scene that displays some useful info and allows you to start the game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_over_a03eea2a6051e37b40465cac9377fa7ec}\label{class_game_over_a03eea2a6051e37b40465cac9377fa7ec}} 
+\index{Game\+Over@{Game\+Over}!Game\+Over@{Game\+Over}}
+\index{Game\+Over@{Game\+Over}!Game\+Over@{Game\+Over}}
+\subsubsection{\texorpdfstring{Game\+Over()}{GameOver()}}
+{\footnotesize\ttfamily Game\+Over\+::\+Game\+Over (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2u}]{p\+\_\+\+Window\+Size,  }\item[{std\+::string}]{p\+\_\+\+Winner,  }\item[{sf\+::\+Color}]{p\+\_\+\+Color }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Window\+Size} & initial window size \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Winner} & the string to be displayed \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Color} & the text color \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_over_a4792ee9e2b587f98576a8023d34f5f5c}\label{class_game_over_a4792ee9e2b587f98576a8023d34f5f5c}} 
+\index{Game\+Over@{Game\+Over}!draw@{draw}}
+\index{draw@{draw}!Game\+Over@{Game\+Over}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+Over\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_ac3fd1d41fa7b7516eeff009de7550552}{Scene}.
+
+\mbox{\Hypertarget{class_game_over_aae04263371e8f82199df51de54ef77d1}\label{class_game_over_aae04263371e8f82199df51de54ef77d1}} 
+\index{Game\+Over@{Game\+Over}!handle\+Keyboard\+Input@{handle\+Keyboard\+Input}}
+\index{handle\+Keyboard\+Input@{handle\+Keyboard\+Input}!Game\+Over@{Game\+Over}}
+\subsubsection{\texorpdfstring{handle\+Keyboard\+Input()}{handleKeyboardInput()}}
+{\footnotesize\ttfamily void Game\+Over\+::handle\+Keyboard\+Input (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+handle keyboard events 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Key} & the key that was pressed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_a182f90e2638c0da6a8ba2eab7cdc73ae}{Scene}.
+
+\mbox{\Hypertarget{class_game_over_a83c0cecb3faab5ea8c36272e931006f7}\label{class_game_over_a83c0cecb3faab5ea8c36272e931006f7}} 
+\index{Game\+Over@{Game\+Over}!handle\+Mouse\+Input@{handle\+Mouse\+Input}}
+\index{handle\+Mouse\+Input@{handle\+Mouse\+Input}!Game\+Over@{Game\+Over}}
+\subsubsection{\texorpdfstring{handle\+Mouse\+Input()}{handleMouseInput()}}
+{\footnotesize\ttfamily void Game\+Over\+::handle\+Mouse\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{p\+\_\+\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+handle mouse button events 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Button} & the button that was pressed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_ad9240c92a58c4dba4c2409ec8bcff686}{Scene}.
+
+\mbox{\Hypertarget{class_game_over_a6b9465b5c095a1de0e467baf17045fac}\label{class_game_over_a6b9465b5c095a1de0e467baf17045fac}} 
+\index{Game\+Over@{Game\+Over}!update@{update}}
+\index{update@{update}!Game\+Over@{Game\+Over}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+Over\+::update (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+update the menu 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Time\+Step} & time elapsed since last frame \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_a461d21cd952c7dd0556850a3fc95a760}{Scene}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_game_over_8h}{Game\+Over.\+h}\end{DoxyCompactItemize}

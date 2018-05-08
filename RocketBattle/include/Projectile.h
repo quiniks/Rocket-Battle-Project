@@ -8,7 +8,7 @@
 #include <iostream>
 #include "DynamicObject.h"
 
-/* \class Projectile
+/*! \class Projectile
 \brief A dynamic object that has damage
 */
 

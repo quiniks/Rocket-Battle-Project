@@ -17,7 +17,7 @@
 #include "Scene.h"
 #include "GameOver.h"
 
-/* \class Game
+/*! \class Game
 \brief A game scene that runs the rocket battle game
 */
 

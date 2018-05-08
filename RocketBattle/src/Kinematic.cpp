@@ -52,12 +52,12 @@ void Kinematic::setRotation(float p_Rotation)
 {
 	m_Rotation = p_Rotation;
 }
-*/
+
 void Kinematic::setAngularVel(float p_AngularVel)
 {
 	m_AngularVelocity = p_AngularVel;
 }
-/*
+
 void Kinematic::setAngularAccel(float p_AngularAccel)
 {
 	m_AngularAcceleration = p_AngularAccel;

@@ -7,7 +7,7 @@
 #include <SFML\Graphics.hpp>
 #include <iostream>
 
-/* \class Scene
+/*! \class Scene
 \brief A class that provides late binding methods for an interactable screen e.g. a game or a menu
 */
 

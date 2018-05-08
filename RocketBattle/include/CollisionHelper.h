@@ -10,7 +10,7 @@
 #include "Particle.h"
 #include <iostream>
 
-/* \class CollisionHelper
+/*! \class CollisionHelper
 \brief A class that contains all the relavent collision checking and resolve methods
 */
 
@@ -53,7 +53,7 @@ public:
 	* @param[in] p_Normal the surface normal
 	* @param[in] p_CollisionPos the point of impact
 	*/
-	static void resolve(Particle & p_Particle, sf::Vector2f p_Normal, sf::Vector2i p_CollosionPos);
+	static void resolve(Particle & p_Particle, sf::Vector2f p_Normal, sf::Vector2i p_CollisionPos);
 	/*!
 	* resolve a dynamic object collision
 	* @param[in] p_DynamicObj The dynamic object that collided
@@ -83,15 +83,15 @@ public:
 	* @param[in] p_BB1 Bounding box 1
 	* @param[in] p_Pos1 Position of Bounding Box 1
 	* @param[in] p_BB2 Bounding box 2
-	* @param[int] p_Pos2 Position of Bounding Box 2
+	* @param[in] p_Pos2 Position of Bounding Box 2
 	*/
 	static bool AABBvsAABB(sf::FloatRect p_BB1, sf::Vector2f p_Pos1, sf::FloatRect p_BB2, sf::Vector2f p_Pos2);
 	/*!
 	* Axis Aligned Bounding Box vs Circle collision check
-	* @param[in] p_Circle Circle 1
+	* @param[in] p_Circle1 Circle 1
 	* @param[in] p_Pos1 Position of Circle 1
 	* @param[in] p_BB2 Bounding box 2
-	* @param[int] p_Pos2 Position of Bounding Box 2
+	* @param[in] p_Pos2 Position of Bounding Box 2
 	*/
 	static bool AABBvsCircle(sf::CircleShape p_Circle1, sf::Vector2f p_Pos1, sf::FloatRect p_BB2, sf::Vector2f p_Pos2);
 };

@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Kinematic.h"
 
-/* \class DynamicObject
+/*! \class DynamicObject
 \brief A kinematic rectangle that can be affected by forces
 */
 

@@ -1,0 +1,186 @@
+\hypertarget{class_rocket}{}\section{Rocket Class Reference}
+\label{class_rocket}\index{Rocket@{Rocket}}
+
+
+A playable rocket class that keeps track of fuel and life.  
+
+
+
+
+{\ttfamily \#include $<$Rocket.\+h$>$}
+
+
+
+Inheritance diagram for Rocket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_rocket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rocket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_rocket__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rocket_a5ddbd398e8bfa09b242d77d866651702}{Rocket} (sf\+::\+Texture $\ast$p\+\_\+\+Texture, float p\+\_\+\+Restitution, sf\+::\+Vector2f p\+\_\+\+Size, sf\+::\+Vector2f p\+\_\+\+Start\+Pos, float p\+\_\+\+Density, float p\+\_\+\+Drag\+Co, float p\+\_\+\+Fric\+Co, int p\+\_\+\+Team)
+\item 
+\mbox{\Hypertarget{class_rocket_ab0cbe044146250c3e592832bb4909ff9}\label{class_rocket_ab0cbe044146250c3e592832bb4909ff9}} 
+\hyperlink{class_rocket_ab0cbe044146250c3e592832bb4909ff9}{$\sim$\+Rocket} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_rocket_a3ecac400b4edb82d8288be25f9a0b949}{set\+Texture} (sf\+::\+Texture $\ast$p\+\_\+\+Texture)
+\item 
+void \hyperlink{class_rocket_a775dd0b77b6f82010d9ff201d266bf89}{set\+Life} (float p\+\_\+\+Life)
+\item 
+\mbox{\Hypertarget{class_rocket_ab6320ec0717a04f1709d91fb92d7cf74}\label{class_rocket_ab6320ec0717a04f1709d91fb92d7cf74}} 
+float \hyperlink{class_rocket_ab6320ec0717a04f1709d91fb92d7cf74}{get\+Life} ()
+\begin{DoxyCompactList}\small\item\em get life \end{DoxyCompactList}\item 
+void \hyperlink{class_rocket_aac617e928cc99125cf014ac5dbb57b9b}{set\+Fuel} (float p\+\_\+\+Fuel)
+\item 
+\mbox{\Hypertarget{class_rocket_ad5e168da70869f966ddd535b38c18c8f}\label{class_rocket_ad5e168da70869f966ddd535b38c18c8f}} 
+float \hyperlink{class_rocket_ad5e168da70869f966ddd535b38c18c8f}{get\+Fuel} ()
+\begin{DoxyCompactList}\small\item\em get fuel \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a43995d3f49c3d00f8d6c5bbe7aefc5e2}\label{class_rocket_a43995d3f49c3d00f8d6c5bbe7aefc5e2}} 
+int \hyperlink{class_rocket_a43995d3f49c3d00f8d6c5bbe7aefc5e2}{get\+Team} ()
+\begin{DoxyCompactList}\small\item\em get team \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_ad7c2bc69fc216ecb9320a77c044fff07}\label{class_rocket_ad7c2bc69fc216ecb9320a77c044fff07}} 
+float \hyperlink{class_rocket_ad7c2bc69fc216ecb9320a77c044fff07}{area} ()
+\begin{DoxyCompactList}\small\item\em returns the area \end{DoxyCompactList}\item 
+void \hyperlink{class_rocket_a4b83a058408ee42ea77248dd8f0d3339}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rocket_a584dfdd155f46944168ebfd23b158bf2}\label{class_rocket_a584dfdd155f46944168ebfd23b158bf2}} 
+sf\+::\+Sprite \hyperlink{class_rocket_a584dfdd155f46944168ebfd23b158bf2}{m\+\_\+\+Sprite}
+\begin{DoxyCompactList}\small\item\em Sprite to draw rocket texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a5d12b42180029361f37e9ce86a75f1eb}\label{class_rocket_a5d12b42180029361f37e9ce86a75f1eb}} 
+int \hyperlink{class_rocket_a5d12b42180029361f37e9ce86a75f1eb}{m\+\_\+\+Team} = 0
+\begin{DoxyCompactList}\small\item\em Team value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a6e8e5f6f965fa1fc8d7919b4c7a7d42b}\label{class_rocket_a6e8e5f6f965fa1fc8d7919b4c7a7d42b}} 
+float \hyperlink{class_rocket_a6e8e5f6f965fa1fc8d7919b4c7a7d42b}{m\+\_\+\+Max\+Life} = 100.\+0f
+\begin{DoxyCompactList}\small\item\em Maximum life. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a564ba8da5fdab5a6bccef0adfb58864d}\label{class_rocket_a564ba8da5fdab5a6bccef0adfb58864d}} 
+float \hyperlink{class_rocket_a564ba8da5fdab5a6bccef0adfb58864d}{m\+\_\+\+Life} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Current life. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a66c5adff518ec4cd545a3a669e8448c7}\label{class_rocket_a66c5adff518ec4cd545a3a669e8448c7}} 
+float \hyperlink{class_rocket_a66c5adff518ec4cd545a3a669e8448c7}{m\+\_\+\+Life\+Bar\+Max\+Length}
+\begin{DoxyCompactList}\small\item\em Life bar\textquotesingle{}s max length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a8ae0960136c6fb41a9795ca555c1f61d}\label{class_rocket_a8ae0960136c6fb41a9795ca555c1f61d}} 
+sf\+::\+Rectangle\+Shape \hyperlink{class_rocket_a8ae0960136c6fb41a9795ca555c1f61d}{m\+\_\+\+Life\+Bar}
+\begin{DoxyCompactList}\small\item\em Life bar rectangle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a931d317896687553b03709b1532ef00f}\label{class_rocket_a931d317896687553b03709b1532ef00f}} 
+sf\+::\+Vector2f \hyperlink{class_rocket_a931d317896687553b03709b1532ef00f}{m\+\_\+\+Life\+Bar\+Offset}
+\begin{DoxyCompactList}\small\item\em Life bar Offset from the rocket position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_ac27158eb4ce58650f76a258bef38bb8e}\label{class_rocket_ac27158eb4ce58650f76a258bef38bb8e}} 
+float \hyperlink{class_rocket_ac27158eb4ce58650f76a258bef38bb8e}{m\+\_\+\+Max\+Fuel} = 250.\+0f
+\begin{DoxyCompactList}\small\item\em Maximum fuel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_ab8321d9115c93fca3556d06d96edd627}\label{class_rocket_ab8321d9115c93fca3556d06d96edd627}} 
+float \hyperlink{class_rocket_ab8321d9115c93fca3556d06d96edd627}{m\+\_\+\+Fuel} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Current fuel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_ab2987e91884c522731200e5b4b3b53c2}\label{class_rocket_ab2987e91884c522731200e5b4b3b53c2}} 
+float \hyperlink{class_rocket_ab2987e91884c522731200e5b4b3b53c2}{m\+\_\+\+Fuel\+Bar\+Max\+Length}
+\begin{DoxyCompactList}\small\item\em Fuel bar\textquotesingle{}s max length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_a8db4d19c2b34f322d5d772bd39227c9c}\label{class_rocket_a8db4d19c2b34f322d5d772bd39227c9c}} 
+sf\+::\+Rectangle\+Shape \hyperlink{class_rocket_a8db4d19c2b34f322d5d772bd39227c9c}{m\+\_\+\+Fuel\+Bar}
+\begin{DoxyCompactList}\small\item\em Fuel bar\textquotesingle{}s rectangle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rocket_ab490e90b430de879b899d572d9e84a4d}\label{class_rocket_ab490e90b430de879b899d572d9e84a4d}} 
+sf\+::\+Vector2f \hyperlink{class_rocket_ab490e90b430de879b899d572d9e84a4d}{m\+\_\+\+Fuel\+Bar\+Offset}
+\begin{DoxyCompactList}\small\item\em Fuel bar offset from rocket position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A playable rocket class that keeps track of fuel and life. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rocket_a5ddbd398e8bfa09b242d77d866651702}\label{class_rocket_a5ddbd398e8bfa09b242d77d866651702}} 
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{Rocket()}{Rocket()}}
+{\footnotesize\ttfamily Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{p\+\_\+\+Texture,  }\item[{float}]{p\+\_\+\+Restitution,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Size,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Start\+Pos,  }\item[{float}]{p\+\_\+\+Density,  }\item[{float}]{p\+\_\+\+Drag\+Co,  }\item[{float}]{p\+\_\+\+Fric\+Co,  }\item[{int}]{p\+\_\+\+Team }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Texture} & Initial texture \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Restitution} & Intial bounciness \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Size} & Initial size of the the axis aligned bounding box \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Start\+Pos} & Initial position of the rocket \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Density} & Initial density \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Drag\+Co} & Intial drag coefficient \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Fric\+Co} & Intial friction coefficient \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Team} & Initial team \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rocket_a4b83a058408ee42ea77248dd8f0d3339}\label{class_rocket_a4b83a058408ee42ea77248dd8f0d3339}} 
+\index{Rocket@{Rocket}!draw@{draw}}
+\index{draw@{draw}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Rocket\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_kinematic_a5d403bfe970efc1f0cebc872e3e2898b}{Kinematic}.
+
+\mbox{\Hypertarget{class_rocket_aac617e928cc99125cf014ac5dbb57b9b}\label{class_rocket_aac617e928cc99125cf014ac5dbb57b9b}} 
+\index{Rocket@{Rocket}!set\+Fuel@{set\+Fuel}}
+\index{set\+Fuel@{set\+Fuel}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{set\+Fuel()}{setFuel()}}
+{\footnotesize\ttfamily void Rocket\+::set\+Fuel (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Fuel }\end{DoxyParamCaption})}
+
+set the fuel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Fuel} & fuel value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rocket_a775dd0b77b6f82010d9ff201d266bf89}\label{class_rocket_a775dd0b77b6f82010d9ff201d266bf89}} 
+\index{Rocket@{Rocket}!set\+Life@{set\+Life}}
+\index{set\+Life@{set\+Life}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{set\+Life()}{setLife()}}
+{\footnotesize\ttfamily void Rocket\+::set\+Life (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Life }\end{DoxyParamCaption})}
+
+Set the life 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Life} & life value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rocket_a3ecac400b4edb82d8288be25f9a0b949}\label{class_rocket_a3ecac400b4edb82d8288be25f9a0b949}} 
+\index{Rocket@{Rocket}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{set\+Texture()}{setTexture()}}
+{\footnotesize\ttfamily void Rocket\+::set\+Texture (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{p\+\_\+\+Texture }\end{DoxyParamCaption})}
+
+Set the texture 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Texture} & Chosen texture to switch to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_rocket_8h}{Rocket.\+h}\end{DoxyCompactItemize}

@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-/* \class Terrain
+/*! \class Terrain
 \brief A class that handles an sf::Image and provides methods for objects to react to its pixels
 */
 
@@ -30,7 +30,7 @@ public:
 	/*!
 	* Calculates a unit surface normal from a sqaure of pixels based on transparency
 	* @param[in] p_X X value
-	* @param[in] p_X Y value
+	* @param[in] p_Y Y value
 	* @param[in] p_Radius Search radius
 	*/
 	sf::Vector2f getNormal(int p_X, int p_Y, int p_Radius);

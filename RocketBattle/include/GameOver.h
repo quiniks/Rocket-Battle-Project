@@ -11,7 +11,7 @@
 #include "TextButton.h"
 #include "Menu.h"
 
-/* \class GameOver
+/*! \class GameOver
 \brief A menu scene that displays some useful info and allows you to start the game
 */
 

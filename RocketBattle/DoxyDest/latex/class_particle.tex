@@ -1,0 +1,138 @@
+\hypertarget{class_particle}{}\section{Particle Class Reference}
+\label{class_particle}\index{Particle@{Particle}}
+
+
+A dynamic object that keeps track of how long it exists for and its previous position.  
+
+
+
+
+{\ttfamily \#include $<$Particle.\+h$>$}
+
+
+
+Inheritance diagram for Particle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_particle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Particle\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_particle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_particle_ac4b406b1462a981e7a0e430b7592e049}{Particle} (float p\+\_\+\+Life\+Time, sf\+::\+Vector2f p\+\_\+\+Accel, sf\+::\+Vector2f p\+\_\+\+Vel, sf\+::\+Vector2f p\+\_\+\+Pos, float p\+\_\+\+Restitution, float p\+\_\+\+Density, float p\+\_\+\+Drag\+Co)
+\item 
+void \hyperlink{class_particle_a5a10e04871f4948c80820c79121e28a5}{set\+Last\+Pos} (sf\+::\+Vector2f p\+\_\+\+Position)
+\item 
+\mbox{\Hypertarget{class_particle_a637683e83cbdf74ea92e8f01653e9156}\label{class_particle_a637683e83cbdf74ea92e8f01653e9156}} 
+sf\+::\+Vector2f \hyperlink{class_particle_a637683e83cbdf74ea92e8f01653e9156}{get\+Last\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Get the last position. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_a5a7e1ab519e58d9599cb6de75502f60f}{set\+Life} (float p\+\_\+\+Time)
+\item 
+\mbox{\Hypertarget{class_particle_a59bbb8b7047dfa0c22fcdc37999fb278}\label{class_particle_a59bbb8b7047dfa0c22fcdc37999fb278}} 
+float \hyperlink{class_particle_a59bbb8b7047dfa0c22fcdc37999fb278}{get\+Life} ()
+\begin{DoxyCompactList}\small\item\em get the current life time \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_particle_a979da9e9c175ca4915aa2e074e844d6d}\label{class_particle_a979da9e9c175ca4915aa2e074e844d6d}} 
+float \hyperlink{class_particle_a979da9e9c175ca4915aa2e074e844d6d}{area} ()
+\begin{DoxyCompactList}\small\item\em return the area of a particle \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_a57316a997dbf6b060ec989c059ba9616}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\item 
+\mbox{\Hypertarget{class_particle_ad030d0fe7b88cf81744b127c99244ff4}\label{class_particle_ad030d0fe7b88cf81744b127c99244ff4}} 
+\hyperlink{class_particle_ad030d0fe7b88cf81744b127c99244ff4}{$\sim$\+Particle} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_particle_a1b55980ef25543065a4565224d3cb8d2}\label{class_particle_a1b55980ef25543065a4565224d3cb8d2}} 
+float \hyperlink{class_particle_a1b55980ef25543065a4565224d3cb8d2}{m\+\_\+\+Life\+Time} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em The time left. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_particle_a8d9af488a566382cc890e707212bd272}\label{class_particle_a8d9af488a566382cc890e707212bd272}} 
+sf\+::\+Vector2f \hyperlink{class_particle_a8d9af488a566382cc890e707212bd272}{m\+\_\+\+Last\+Position} = sf\+::\+Vector2f(0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em The particles last position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A dynamic object that keeps track of how long it exists for and its previous position. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_particle_ac4b406b1462a981e7a0e430b7592e049}\label{class_particle_ac4b406b1462a981e7a0e430b7592e049}} 
+\index{Particle@{Particle}!Particle@{Particle}}
+\index{Particle@{Particle}!Particle@{Particle}}
+\subsubsection{\texorpdfstring{Particle()}{Particle()}}
+{\footnotesize\ttfamily Particle\+::\+Particle (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Life\+Time,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Accel,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Vel,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Pos,  }\item[{float}]{p\+\_\+\+Restitution,  }\item[{float}]{p\+\_\+\+Density,  }\item[{float}]{p\+\_\+\+Drag\+Co }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Life\+Time} & Initial life time \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Accel} & Intial acceleration \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Vel} & Initial velocity \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Pos} & Initial position \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Restitution} & Initial bounciness \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Density} & Initial density \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Drag\+Co} & Intial drag coefficient \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_particle_a57316a997dbf6b060ec989c059ba9616}\label{class_particle_a57316a997dbf6b060ec989c059ba9616}} 
+\index{Particle@{Particle}!draw@{draw}}
+\index{draw@{draw}!Particle@{Particle}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Particle\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_kinematic_a5d403bfe970efc1f0cebc872e3e2898b}{Kinematic}.
+
+\mbox{\Hypertarget{class_particle_a5a10e04871f4948c80820c79121e28a5}\label{class_particle_a5a10e04871f4948c80820c79121e28a5}} 
+\index{Particle@{Particle}!set\+Last\+Pos@{set\+Last\+Pos}}
+\index{set\+Last\+Pos@{set\+Last\+Pos}!Particle@{Particle}}
+\subsubsection{\texorpdfstring{set\+Last\+Pos()}{setLastPos()}}
+{\footnotesize\ttfamily void Particle\+::set\+Last\+Pos (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Position }\end{DoxyParamCaption})}
+
+Set the last position 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Position} & Position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_particle_a5a7e1ab519e58d9599cb6de75502f60f}\label{class_particle_a5a7e1ab519e58d9599cb6de75502f60f}} 
+\index{Particle@{Particle}!set\+Life@{set\+Life}}
+\index{set\+Life@{set\+Life}!Particle@{Particle}}
+\subsubsection{\texorpdfstring{set\+Life()}{setLife()}}
+{\footnotesize\ttfamily void Particle\+::set\+Life (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Time }\end{DoxyParamCaption})}
+
+Set the particles life to a set amount of time 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Time} & time amount \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_particle_8h}{Particle.\+h}\end{DoxyCompactItemize}

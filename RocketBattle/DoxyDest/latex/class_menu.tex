@@ -1,0 +1,133 @@
+\hypertarget{class_menu}{}\section{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+
+
+A menu scene that displays some useful info and allows you to start the game.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{class_menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_menu__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_menu_a9d1e0ed519f27305e1e5a7237f1586bb}{Menu} (sf\+::\+Vector2u p\+\_\+\+Window\+Size)
+\item 
+\mbox{\Hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}\label{class_menu_a831387f51358cfb88cd018e1777bc980}} 
+\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_menu_a2ebc63a5e64b90dcfae4284e7f7f4be6}{handle\+Keyboard\+Input} (int p\+\_\+\+Key)
+\item 
+void \hyperlink{class_menu_a4f99fe96e47268bd4561df0c8faa23c8}{handle\+Mouse\+Input} (sf\+::\+Mouse\+::\+Button p\+\_\+\+Button)
+\item 
+void \hyperlink{class_menu_a8043b25a060513367b0e286d3ae397d2}{update} (float p\+\_\+\+Time\+Step)
+\item 
+void \hyperlink{class_menu_aa0e69963ee402f3559680e5a691b03fd}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A menu scene that displays some useful info and allows you to start the game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_a9d1e0ed519f27305e1e5a7237f1586bb}\label{class_menu_a9d1e0ed519f27305e1e5a7237f1586bb}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\subsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2u}]{p\+\_\+\+Window\+Size }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Window\+Size} & initial window size \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_aa0e69963ee402f3559680e5a691b03fd}\label{class_menu_aa0e69963ee402f3559680e5a691b03fd}} 
+\index{Menu@{Menu}!draw@{draw}}
+\index{draw@{draw}!Menu@{Menu}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Menu\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_ac3fd1d41fa7b7516eeff009de7550552}{Scene}.
+
+\mbox{\Hypertarget{class_menu_a2ebc63a5e64b90dcfae4284e7f7f4be6}\label{class_menu_a2ebc63a5e64b90dcfae4284e7f7f4be6}} 
+\index{Menu@{Menu}!handle\+Keyboard\+Input@{handle\+Keyboard\+Input}}
+\index{handle\+Keyboard\+Input@{handle\+Keyboard\+Input}!Menu@{Menu}}
+\subsubsection{\texorpdfstring{handle\+Keyboard\+Input()}{handleKeyboardInput()}}
+{\footnotesize\ttfamily void Menu\+::handle\+Keyboard\+Input (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+handle keyboard events 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Key} & the key that was pressed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_a182f90e2638c0da6a8ba2eab7cdc73ae}{Scene}.
+
+\mbox{\Hypertarget{class_menu_a4f99fe96e47268bd4561df0c8faa23c8}\label{class_menu_a4f99fe96e47268bd4561df0c8faa23c8}} 
+\index{Menu@{Menu}!handle\+Mouse\+Input@{handle\+Mouse\+Input}}
+\index{handle\+Mouse\+Input@{handle\+Mouse\+Input}!Menu@{Menu}}
+\subsubsection{\texorpdfstring{handle\+Mouse\+Input()}{handleMouseInput()}}
+{\footnotesize\ttfamily void Menu\+::handle\+Mouse\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{p\+\_\+\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+handle mouse button events 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Button} & the button that was pressed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_ad9240c92a58c4dba4c2409ec8bcff686}{Scene}.
+
+\mbox{\Hypertarget{class_menu_a8043b25a060513367b0e286d3ae397d2}\label{class_menu_a8043b25a060513367b0e286d3ae397d2}} 
+\index{Menu@{Menu}!update@{update}}
+\index{update@{update}!Menu@{Menu}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Menu\+::update (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+update the menu 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Time\+Step} & time elapsed since last frame \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_a461d21cd952c7dd0556850a3fc95a760}{Scene}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_menu_8h}{Menu.\+h}\end{DoxyCompactItemize}

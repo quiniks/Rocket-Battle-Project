@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['game',['Game',['../class_game.html',1,'']]]
+  ['collisionhelper',['CollisionHelper',['../class_collision_helper.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Battle Project: Terrain Class Reference</title>
+<title>Rocket Battle Project - P16184152: Terrain Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RedRocket.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Rocket Battle Project
+   <div id="projectname">Rocket Battle Project - P16184152
    </div>
   </td>
  </tr>
@@ -65,30 +66,206 @@ $(function() {
 <div class="title">Terrain Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that handles an sf::Image and provides methods for objects to react to its pixels.  
+ <a href="class_terrain.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_terrain_8h_source.html">Terrain.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Terrain:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_terrain.png" usemap="#Terrain_map" alt=""/>
-  <map id="Terrain_map" name="Terrain_map">
-</map>
- </div></div>
+<div class="center"><img src="class_terrain__inherit__graph.png" border="0" usemap="#_terrain_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Terrain:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_terrain__coll__graph.png" border="0" usemap="#_terrain_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab42c4af61b057ccc1af4f2ebbfefa550"><td class="memItemLeft" align="right" valign="top"><a id="ab42c4af61b057ccc1af4f2ebbfefa550"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadTerrain</b> (sf::Texture *p_Texture)</td></tr>
-<tr class="separator:ab42c4af61b057ccc1af4f2ebbfefa550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a728b4b72b41aaf1ed463652737b81b37"><td class="memItemLeft" align="right" valign="top"><a id="a728b4b72b41aaf1ed463652737b81b37"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>GetNormal</b> (unsigned int p_X, unsigned int p_Y, int p_Radius)</td></tr>
-<tr class="separator:a728b4b72b41aaf1ed463652737b81b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1929db8af46f2b4a1a053ac33b495bb1"><td class="memItemLeft" align="right" valign="top"><a id="a1929db8af46f2b4a1a053ac33b495bb1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SubtractShape</b> (sf::Shape *p_Shape)</td></tr>
-<tr class="separator:a1929db8af46f2b4a1a053ac33b495bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46d26ac3525b10ca6bbf065b2627c2b6"><td class="memItemLeft" align="right" valign="top"><a id="a46d26ac3525b10ca6bbf065b2627c2b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderTarget &amp;target, sf::RenderStates states) const</td></tr>
+<tr class="memitem:a7160a06ab07a86ed97d23374405e8ef6"><td class="memItemLeft" align="right" valign="top"><a id="a7160a06ab07a86ed97d23374405e8ef6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#a7160a06ab07a86ed97d23374405e8ef6">Terrain</a> ()</td></tr>
+<tr class="memdesc:a7160a06ab07a86ed97d23374405e8ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor <br /></td></tr>
+<tr class="separator:a7160a06ab07a86ed97d23374405e8ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7f0a2aee54886324ccf48a6f321de0"><td class="memItemLeft" align="right" valign="top"><a id="a2f7f0a2aee54886324ccf48a6f321de0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#a2f7f0a2aee54886324ccf48a6f321de0">~Terrain</a> ()</td></tr>
+<tr class="memdesc:a2f7f0a2aee54886324ccf48a6f321de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor <br /></td></tr>
+<tr class="separator:a2f7f0a2aee54886324ccf48a6f321de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed679808f60645f640f51ccfcba060ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#aed679808f60645f640f51ccfcba060ea">loadTerrain</a> (sf::Texture *p_ForegroundTexture, sf::Texture *p_BackgroundTexture)</td></tr>
+<tr class="separator:aed679808f60645f640f51ccfcba060ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb669403f8c3ed5bd4db2ff68f7f3ee2"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#aeb669403f8c3ed5bd4db2ff68f7f3ee2">getNormal</a> (int p_X, int p_Y, int p_Radius)</td></tr>
+<tr class="separator:aeb669403f8c3ed5bd4db2ff68f7f3ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163e210cde25acd11b12a0a68e6f2c66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#a163e210cde25acd11b12a0a68e6f2c66">isPixelEmpty</a> (sf::Vector2i m_Pos)</td></tr>
+<tr class="separator:a163e210cde25acd11b12a0a68e6f2c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c6fe83cb58a979f73405068cf3b435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#a57c6fe83cb58a979f73405068cf3b435">subtractShape</a> (sf::Shape &amp;p_Shape)</td></tr>
+<tr class="separator:a57c6fe83cb58a979f73405068cf3b435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d26ac3525b10ca6bbf065b2627c2b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_terrain.html#a46d26ac3525b10ca6bbf065b2627c2b6">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const</td></tr>
 <tr class="separator:a46d26ac3525b10ca6bbf065b2627c2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that handles an sf::Image and provides methods for objects to react to its pixels. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a46d26ac3525b10ca6bbf065b2627c2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d26ac3525b10ca6bbf065b2627c2b6">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Terrain::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::RenderStates&#160;</td>
+          <td class="paramname"><em>states</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">target</td><td>Render target to draw to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">states</td><td>Render state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb669403f8c3ed5bd4db2ff68f7f3ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb669403f8c3ed5bd4db2ff68f7f3ee2">&#9670;&nbsp;</a></span>getNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f Terrain::getNormal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_Y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_Radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculates a unit surface normal from a sqaure of pixels based on transparency </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_X</td><td>X value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_Y</td><td>Y value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_Radius</td><td>Search radius </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a163e210cde25acd11b12a0a68e6f2c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163e210cde25acd11b12a0a68e6f2c66">&#9670;&nbsp;</a></span>isPixelEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Terrain::isPixelEmpty </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2i&#160;</td>
+          <td class="paramname"><em>m_Pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if a pixel is empty </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m_Pos</td><td>Chosen pixel to check </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed679808f60645f640f51ccfcba060ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed679808f60645f640f51ccfcba060ea">&#9670;&nbsp;</a></span>loadTerrain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Terrain::loadTerrain </td>
+          <td>(</td>
+          <td class="paramtype">sf::Texture *&#160;</td>
+          <td class="paramname"><em>p_ForegroundTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Texture *&#160;</td>
+          <td class="paramname"><em>p_BackgroundTexture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copies a texture to m_Image. Also sets foreground/background sprite's textures </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_ForegroundTexture</td><td>Texture to be copied to m_Image and foreground sprite </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BackgroundTexture</td><td>Texture for background sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a57c6fe83cb58a979f73405068cf3b435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c6fe83cb58a979f73405068cf3b435">&#9670;&nbsp;</a></span>subtractShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Terrain::subtractShape </td>
+          <td>(</td>
+          <td class="paramtype">sf::Shape &amp;&#160;</td>
+          <td class="paramname"><em>p_Shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Subtract a shape from the image </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_Shape</td><td>Polymorphic shape to subtract </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="_terrain_8h_source.html">Terrain.h</a></li>
 </ul>

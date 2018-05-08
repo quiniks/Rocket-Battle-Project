@@ -1,0 +1,4 @@
+<map id="Particle" name="Particle">
+<area shape="rect" id="node2" href="$class_dynamic_object.html" title="A kinematic rectangle that can be affected by forces. " alt="" coords="5,155,116,181"/>
+<area shape="rect" id="node3" href="$class_kinematic.html" title="A class that provides methods to create motion using position, velocity and acceleration. " alt="" coords="21,80,101,107"/>
+</map>

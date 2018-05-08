@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rocket Battle Project: Game Class Reference</title>
+<title>Rocket Battle Project - P16184152: Game Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,8 +20,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="RedRocket.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Rocket Battle Project
+   <div id="projectname">Rocket Battle Project - P16184152
    </div>
   </td>
  </tr>
@@ -65,27 +66,263 @@ $(function() {
 <div class="title">Game Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A game scene that runs the rocket battle game.  
+ <a href="class_game.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_8h_source.html">Game.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Game:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_game.png" usemap="#Game_map" alt=""/>
-  <map id="Game_map" name="Game_map">
+<div class="center"><img src="class_game__inherit__graph.png" border="0" usemap="#_game_inherit__map" alt="Inheritance graph"/></div>
+<map name="_game_inherit__map" id="_game_inherit__map">
+<area shape="rect" id="node2" href="class_scene.html" title="A class that provides late binding methods for an interactable screen e.g. a game or a menu..." alt="" coords="13,80,72,107"/>
 </map>
- </div></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Game:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game__coll__graph.png" border="0" usemap="#_game_coll__map" alt="Collaboration graph"/></div>
+<map name="_game_coll__map" id="_game_coll__map">
+<area shape="rect" id="node2" href="class_scene.html" title="A class that provides late binding methods for an interactable screen e.g. a game or a menu..." alt="" coords="13,81,72,108"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5abc4e07a1f5abce24e473c5567300b"><td class="memItemLeft" align="right" valign="top"><a id="aa5abc4e07a1f5abce24e473c5567300b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handleInput</b> ()</td></tr>
-<tr class="separator:aa5abc4e07a1f5abce24e473c5567300b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd12339411955db6a5445ba213ef293"><td class="memItemLeft" align="right" valign="top"><a id="a3fd12339411955db6a5445ba213ef293"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (float p_TimeStep)</td></tr>
+<tr class="memitem:acfaa5dfffe755ef1b09948e9074189b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#acfaa5dfffe755ef1b09948e9074189b5">Game</a> (sf::Vector2u p_WindowSize)</td></tr>
+<tr class="separator:acfaa5dfffe755ef1b09948e9074189b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ccc7e91593f06a0e722cc419016a237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a6ccc7e91593f06a0e722cc419016a237">handleKeyboardInput</a> (int p_Key)</td></tr>
+<tr class="separator:a6ccc7e91593f06a0e722cc419016a237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c0ddbb7a468997249acbdd6cf2dbe34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1c0ddbb7a468997249acbdd6cf2dbe34">handleMouseInput</a> (sf::Mouse::Button p_Button)</td></tr>
+<tr class="separator:a1c0ddbb7a468997249acbdd6cf2dbe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd12339411955db6a5445ba213ef293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3fd12339411955db6a5445ba213ef293">update</a> (float p_TimeStep)</td></tr>
 <tr class="separator:a3fd12339411955db6a5445ba213ef293"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143d1a2f8a527db60f1fe47ab3d854a7"><td class="memItemLeft" align="right" valign="top"><a id="a143d1a2f8a527db60f1fe47ab3d854a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderTarget &amp;target, sf::RenderStates states) const</td></tr>
+<tr class="memitem:a143d1a2f8a527db60f1fe47ab3d854a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a143d1a2f8a527db60f1fe47ab3d854a7">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const</td></tr>
 <tr class="separator:a143d1a2f8a527db60f1fe47ab3d854a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_scene"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_scene')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_scene.html">Scene</a></td></tr>
+<tr class="memitem:ad10176d75a9cc0da56626f682d083507 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="ad10176d75a9cc0da56626f682d083507"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ad10176d75a9cc0da56626f682d083507">Scene</a> ()</td></tr>
+<tr class="memdesc:ad10176d75a9cc0da56626f682d083507 inherit pub_methods_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:ad10176d75a9cc0da56626f682d083507 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8cec2e32546713915f8c6303c951f1 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a3b8cec2e32546713915f8c6303c951f1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a> ()</td></tr>
+<tr class="memdesc:a3b8cec2e32546713915f8c6303c951f1 inherit pub_methods_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a3b8cec2e32546713915f8c6303c951f1 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cdbd23d08e1faa0becceaf8bd130ac7 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a2cdbd23d08e1faa0becceaf8bd130ac7">handleMouseMove</a> (const sf::RenderWindow &amp;p_Window)</td></tr>
+<tr class="separator:a2cdbd23d08e1faa0becceaf8bd130ac7 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6229a5c43e32fe5b92357e61850e8b0d inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a6229a5c43e32fe5b92357e61850e8b0d"></a>
+<a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a6229a5c43e32fe5b92357e61850e8b0d">getNextScene</a> ()</td></tr>
+<tr class="memdesc:a6229a5c43e32fe5b92357e61850e8b0d inherit pub_methods_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the heap for the next scene. <br /></td></tr>
+<tr class="separator:a6229a5c43e32fe5b92357e61850e8b0d inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67993233347f2f6ab2765598b627d9aa inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a67993233347f2f6ab2765598b627d9aa"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a67993233347f2f6ab2765598b627d9aa">isSceneFinished</a> ()</td></tr>
+<tr class="memdesc:a67993233347f2f6ab2765598b627d9aa inherit pub_methods_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if m_NextScene isnt a nullptr. <br /></td></tr>
+<tr class="separator:a67993233347f2f6ab2765598b627d9aa inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6e039ff2c88295876cf83e599644f4 inherit pub_methods_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="afb6e039ff2c88295876cf83e599644f4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#afb6e039ff2c88295876cf83e599644f4">getDebug</a> ()</td></tr>
+<tr class="memdesc:afb6e039ff2c88295876cf83e599644f4 inherit pub_methods_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the debug state. <br /></td></tr>
+<tr class="separator:afb6e039ff2c88295876cf83e599644f4 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_scene"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_scene')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_scene.html">Scene</a></td></tr>
+<tr class="memitem:a7c893a2bcd5b45f758d1ca2596f2c080 inherit pro_attribs_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a7c893a2bcd5b45f758d1ca2596f2c080"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7c893a2bcd5b45f758d1ca2596f2c080">m_Debug</a> = false</td></tr>
+<tr class="memdesc:a7c893a2bcd5b45f758d1ca2596f2c080 inherit pro_attribs_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug boolean. <br /></td></tr>
+<tr class="separator:a7c893a2bcd5b45f758d1ca2596f2c080 inherit pro_attribs_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac481124f477d63e6c71993685b4bd675 inherit pro_attribs_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="ac481124f477d63e6c71993685b4bd675"></a>
+sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac481124f477d63e6c71993685b4bd675">m_View</a></td></tr>
+<tr class="memdesc:ac481124f477d63e6c71993685b4bd675 inherit pro_attribs_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">The view. <br /></td></tr>
+<tr class="separator:ac481124f477d63e6c71993685b4bd675 inherit pro_attribs_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f2cc1644a291a7102b8e1d069541d65 inherit pro_attribs_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a7f2cc1644a291a7102b8e1d069541d65"></a>
+<a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7f2cc1644a291a7102b8e1d069541d65">m_NextScene</a> = nullptr</td></tr>
+<tr class="memdesc:a7f2cc1644a291a7102b8e1d069541d65 inherit pro_attribs_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to next scene. <br /></td></tr>
+<tr class="separator:a7f2cc1644a291a7102b8e1d069541d65 inherit pro_attribs_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f342aba86b1baa65a92a201ebf89502 inherit pro_attribs_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a2f342aba86b1baa65a92a201ebf89502"></a>
+sf::Vector2u&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a2f342aba86b1baa65a92a201ebf89502">m_WindowSize</a></td></tr>
+<tr class="memdesc:a2f342aba86b1baa65a92a201ebf89502 inherit pro_attribs_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copy of the initial window size. <br /></td></tr>
+<tr class="separator:a2f342aba86b1baa65a92a201ebf89502 inherit pro_attribs_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4714ea68285b5fb621f9355ac09f3a63 inherit pro_attribs_class_scene"><td class="memItemLeft" align="right" valign="top"><a id="a4714ea68285b5fb621f9355ac09f3a63"></a>
+sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4714ea68285b5fb621f9355ac09f3a63">m_MouseWorldPos</a></td></tr>
+<tr class="memdesc:a4714ea68285b5fb621f9355ac09f3a63 inherit pro_attribs_class_scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current mouse pos. <br /></td></tr>
+<tr class="separator:a4714ea68285b5fb621f9355ac09f3a63 inherit pro_attribs_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A game scene that runs the rocket battle game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acfaa5dfffe755ef1b09948e9074189b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfaa5dfffe755ef1b09948e9074189b5">&#9670;&nbsp;</a></span>Game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Game::Game </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2u&#160;</td>
+          <td class="paramname"><em>p_WindowSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_WindowSize</td><td>Initial window size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a143d1a2f8a527db60f1fe47ab3d854a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143d1a2f8a527db60f1fe47ab3d854a7">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::RenderStates&#160;</td>
+          <td class="paramname"><em>states</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draw </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">target</td><td>Render target to draw to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">states</td><td>Render state </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_scene.html#ac3fd1d41fa7b7516eeff009de7550552">Scene</a>.</p>
+
+</div>
+</div>
+<a id="a6ccc7e91593f06a0e722cc419016a237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ccc7e91593f06a0e722cc419016a237">&#9670;&nbsp;</a></span>handleKeyboardInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::handleKeyboardInput </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_Key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>handle keyboard events </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_Key</td><td>the key that was pressed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_scene.html#a182f90e2638c0da6a8ba2eab7cdc73ae">Scene</a>.</p>
+
+</div>
+</div>
+<a id="a1c0ddbb7a468997249acbdd6cf2dbe34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c0ddbb7a468997249acbdd6cf2dbe34">&#9670;&nbsp;</a></span>handleMouseInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::handleMouseInput </td>
+          <td>(</td>
+          <td class="paramtype">sf::Mouse::Button&#160;</td>
+          <td class="paramname"><em>p_Button</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>handle mouse button events </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_Button</td><td>the button that was pressed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_scene.html#ad9240c92a58c4dba4c2409ec8bcff686">Scene</a>.</p>
+
+</div>
+</div>
+<a id="a3fd12339411955db6a5445ba213ef293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd12339411955db6a5445ba213ef293">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p_TimeStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>update the menu </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_TimeStep</td><td>time elapsed since last frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_scene.html#a461d21cd952c7dd0556850a3fc95a760">Scene</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="_game_8h_source.html">Game.h</a></li>
 </ul>

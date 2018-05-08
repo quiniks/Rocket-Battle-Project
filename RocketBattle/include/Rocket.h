@@ -8,7 +8,7 @@
 #include <iostream>
 #include "DynamicObject.h"
 
-/* \class Rocket
+/*! \class Rocket
 \brief A playable rocket class that keeps track of fuel and life
 */
 
@@ -52,15 +52,15 @@ public:
 	* @param[in] p_Life life value
 	*/
 	void setLife(float p_Life);
-	float getLife(); //<! get life
+	float getLife(); //!< get life
 	 /*!
 	 * set the fuel
 	 * @param[in] p_Fuel fuel value
 	 */
 	void setFuel(float p_Fuel);
-	float getFuel(); //<! get fuel
-	int getTeam(); //<! get team
-	float area(); //<! returns the area
+	float getFuel(); //!< get fuel
+	int getTeam(); //!< get team
+	float area(); //!< returns the area
 	/*!
 	* Draw
 	* @param[in, out] target Render target to draw to

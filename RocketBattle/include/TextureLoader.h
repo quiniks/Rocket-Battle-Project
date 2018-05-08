@@ -10,7 +10,7 @@
 #include <Windows.h>
 #include <iostream>
 
-/* \class TextureLoader
+/*! \class TextureLoader
 \brief A singleton loader class that prevents any unnecessary copying of potentially large texture files
 */
 

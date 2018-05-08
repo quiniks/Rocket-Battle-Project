@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-/* \class AimLine
+/*! \class AimLine
 \brief A class that creates, updates and draws an aiming reticle
 */
 

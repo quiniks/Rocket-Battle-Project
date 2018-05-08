@@ -1,0 +1,120 @@
+\hypertarget{class_particle_system}{}\section{Particle\+System Class Reference}
+\label{class_particle_system}\index{Particle\+System@{Particle\+System}}
+
+
+A class that handles updating particles and drawing their respective vertices.  
+
+
+
+
+{\ttfamily \#include $<$Particle\+System.\+h$>$}
+
+
+
+Inheritance diagram for Particle\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_particle_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Particle\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_particle_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_particle_system_a9028ec8023c61773dd4a668c3ad8cc26}\label{class_particle_system_a9028ec8023c61773dd4a668c3ad8cc26}} 
+\hyperlink{class_particle_system_a9028ec8023c61773dd4a668c3ad8cc26}{Particle\+System} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_particle_system_a6bc725349a763b9d6817950cde16a93f}\label{class_particle_system_a6bc725349a763b9d6817950cde16a93f}} 
+\hyperlink{class_particle_system_a6bc725349a763b9d6817950cde16a93f}{$\sim$\+Particle\+System} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_system_a448310d2188470d1a95d41d88bfb802a}{Explosion} (sf\+::\+Vector2f p\+\_\+\+Position, sf\+::\+Vector2f p\+\_\+\+Acceleration, float p\+\_\+\+Max\+Initial\+Speed, unsigned int p\+\_\+\+Amount, float p\+\_\+\+Life\+Time, float p\+\_\+\+Restitution, float p\+\_\+\+Density, float p\+\_\+\+Drag\+Co)
+\item 
+void \hyperlink{class_particle_system_aee020d9307645eca7af65287f196d9c2}{Update} (float p\+\_\+\+Delta\+Time)
+\item 
+\hyperlink{class_particle}{Particle} \& \hyperlink{class_particle_system_a0b5140b76ebaa019c073e1eabb07ab4f}{get\+Particle} (unsigned int p\+\_\+\+Index)
+\item 
+\mbox{\Hypertarget{class_particle_system_a1cb803dde4eb9c586aafffb7bdad65c9}\label{class_particle_system_a1cb803dde4eb9c586aafffb7bdad65c9}} 
+unsigned int \hyperlink{class_particle_system_a1cb803dde4eb9c586aafffb7bdad65c9}{size} ()
+\begin{DoxyCompactList}\small\item\em returns the amount of particles \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_system_aae99e6864b2dec1343ad6e01d33dd5a1}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that handles updating particles and drawing their respective vertices. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_particle_system_aae99e6864b2dec1343ad6e01d33dd5a1}\label{class_particle_system_aae99e6864b2dec1343ad6e01d33dd5a1}} 
+\index{Particle\+System@{Particle\+System}!draw@{draw}}
+\index{draw@{draw}!Particle\+System@{Particle\+System}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Particle\+System\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_particle_system_a448310d2188470d1a95d41d88bfb802a}\label{class_particle_system_a448310d2188470d1a95d41d88bfb802a}} 
+\index{Particle\+System@{Particle\+System}!Explosion@{Explosion}}
+\index{Explosion@{Explosion}!Particle\+System@{Particle\+System}}
+\subsubsection{\texorpdfstring{Explosion()}{Explosion()}}
+{\footnotesize\ttfamily void Particle\+System\+::\+Explosion (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Position,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Acceleration,  }\item[{float}]{p\+\_\+\+Max\+Initial\+Speed,  }\item[{unsigned int}]{p\+\_\+\+Amount,  }\item[{float}]{p\+\_\+\+Life\+Time,  }\item[{float}]{p\+\_\+\+Restitution,  }\item[{float}]{p\+\_\+\+Density,  }\item[{float}]{p\+\_\+\+Drag\+Co }\end{DoxyParamCaption})}
+
+Creates an explosions of particles 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Position} & Initial Position \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Acceleration} & Intial Acceleration \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Max\+Initial\+Speed} & Maximum possible speed of a particle \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Amount} & Amount of particles to spawn \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Life\+Time} & Time before a particle despawns \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Restitution} & Initial restitution \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Density} & Initial density \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Drag\+Co} & Initial drag coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_particle_system_a0b5140b76ebaa019c073e1eabb07ab4f}\label{class_particle_system_a0b5140b76ebaa019c073e1eabb07ab4f}} 
+\index{Particle\+System@{Particle\+System}!get\+Particle@{get\+Particle}}
+\index{get\+Particle@{get\+Particle}!Particle\+System@{Particle\+System}}
+\subsubsection{\texorpdfstring{get\+Particle()}{getParticle()}}
+{\footnotesize\ttfamily \hyperlink{class_particle}{Particle}\& Particle\+System\+::get\+Particle (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+\_\+\+Index }\end{DoxyParamCaption})}
+
+returns a reference to a particle 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Index} & The index of the particle you want to get \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_particle_system_aee020d9307645eca7af65287f196d9c2}\label{class_particle_system_aee020d9307645eca7af65287f196d9c2}} 
+\index{Particle\+System@{Particle\+System}!Update@{Update}}
+\index{Update@{Update}!Particle\+System@{Particle\+System}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Particle\+System\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Delta\+Time }\end{DoxyParamCaption})}
+
+Update the particles and vertex positions 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Delta\+Time} & time elapsed since last frame \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_particle_system_8h}{Particle\+System.\+h}\end{DoxyCompactItemize}

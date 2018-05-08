@@ -1,0 +1,85 @@
+\hypertarget{class_aim_line}{}\section{Aim\+Line Class Reference}
+\label{class_aim_line}\index{Aim\+Line@{Aim\+Line}}
+
+
+A class that creates, updates and draws an aiming reticle.  
+
+
+
+
+{\ttfamily \#include $<$Aim\+Line.\+h$>$}
+
+
+
+Inheritance diagram for Aim\+Line\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{class_aim_line__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Aim\+Line\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{class_aim_line__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aim_line_adee034e256147adafb61e5f40ba14f80}\label{class_aim_line_adee034e256147adafb61e5f40ba14f80}} 
+\hyperlink{class_aim_line_adee034e256147adafb61e5f40ba14f80}{Aim\+Line} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aim_line_ab9c038c34f1ccc00acd2731bf5a05dfc}\label{class_aim_line_ab9c038c34f1ccc00acd2731bf5a05dfc}} 
+\hyperlink{class_aim_line_ab9c038c34f1ccc00acd2731bf5a05dfc}{$\sim$\+Aim\+Line} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aim_line_ab4ef7f120798090a9d14a85f85238edb}\label{class_aim_line_ab4ef7f120798090a9d14a85f85238edb}} 
+float \hyperlink{class_aim_line_ab4ef7f120798090a9d14a85f85238edb}{get\+Multiplier} ()
+\begin{DoxyCompactList}\small\item\em get the multiplier value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aim_line_a03bc44a5faf0b438bbb4c5b9df6927ad}\label{class_aim_line_a03bc44a5faf0b438bbb4c5b9df6927ad}} 
+sf\+::\+Vector2f \hyperlink{class_aim_line_a03bc44a5faf0b438bbb4c5b9df6927ad}{get\+Dir\+Unit} ()
+\begin{DoxyCompactList}\small\item\em get the unit direction vector \end{DoxyCompactList}\item 
+void \hyperlink{class_aim_line_ac84b4e6eba6fadc89229357b33d40187}{update} (sf\+::\+Vector2f p\+\_\+\+Target, sf\+::\+Vector2f p\+\_\+\+Start)
+\item 
+void \hyperlink{class_aim_line_a119d86ded7801300bde99c30ebda6312}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that creates, updates and draws an aiming reticle. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aim_line_a119d86ded7801300bde99c30ebda6312}\label{class_aim_line_a119d86ded7801300bde99c30ebda6312}} 
+\index{Aim\+Line@{Aim\+Line}!draw@{draw}}
+\index{draw@{draw}!Aim\+Line@{Aim\+Line}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Aim\+Line\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aim_line_ac84b4e6eba6fadc89229357b33d40187}\label{class_aim_line_ac84b4e6eba6fadc89229357b33d40187}} 
+\index{Aim\+Line@{Aim\+Line}!update@{update}}
+\index{update@{update}!Aim\+Line@{Aim\+Line}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Aim\+Line\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Target,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Start }\end{DoxyParamCaption})}
+
+update the vertices 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Target} & the target position \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Start} & the start position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_aim_line_8h}{Aim\+Line.\+h}\end{DoxyCompactItemize}

@@ -1,26 +1,120 @@
 \hypertarget{class_terrain}{}\section{Terrain Class Reference}
 \label{class_terrain}\index{Terrain@{Terrain}}
-Inheritance diagram for Terrain\+:\begin{figure}[H]
+
+
+A class that handles an sf\+::\+Image and provides methods for objects to react to its pixels.  
+
+
+
+
+{\ttfamily \#include $<$Terrain.\+h$>$}
+
+
+
+Inheritance diagram for Terrain\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_terrain}
+\includegraphics[width=136pt]{class_terrain__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Terrain\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{class_terrain__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_terrain_ab42c4af61b057ccc1af4f2ebbfefa550}\label{class_terrain_ab42c4af61b057ccc1af4f2ebbfefa550}} 
-void {\bfseries Load\+Terrain} (sf\+::\+Texture $\ast$p\+\_\+\+Texture)
+\mbox{\Hypertarget{class_terrain_a7160a06ab07a86ed97d23374405e8ef6}\label{class_terrain_a7160a06ab07a86ed97d23374405e8ef6}} 
+\hyperlink{class_terrain_a7160a06ab07a86ed97d23374405e8ef6}{Terrain} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_terrain_a2f7f0a2aee54886324ccf48a6f321de0}\label{class_terrain_a2f7f0a2aee54886324ccf48a6f321de0}} 
+\hyperlink{class_terrain_a2f7f0a2aee54886324ccf48a6f321de0}{$\sim$\+Terrain} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \hyperlink{class_terrain_aed679808f60645f640f51ccfcba060ea}{load\+Terrain} (sf\+::\+Texture $\ast$p\+\_\+\+Foreground\+Texture, sf\+::\+Texture $\ast$p\+\_\+\+Background\+Texture)
 \item 
-\mbox{\Hypertarget{class_terrain_a728b4b72b41aaf1ed463652737b81b37}\label{class_terrain_a728b4b72b41aaf1ed463652737b81b37}} 
-sf\+::\+Vector2f {\bfseries Get\+Normal} (unsigned int p\+\_\+X, unsigned int p\+\_\+Y, int p\+\_\+\+Radius)
+sf\+::\+Vector2f \hyperlink{class_terrain_aeb669403f8c3ed5bd4db2ff68f7f3ee2}{get\+Normal} (int p\+\_\+X, int p\+\_\+Y, int p\+\_\+\+Radius)
 \item 
-\mbox{\Hypertarget{class_terrain_a1929db8af46f2b4a1a053ac33b495bb1}\label{class_terrain_a1929db8af46f2b4a1a053ac33b495bb1}} 
-void {\bfseries Subtract\+Shape} (sf\+::\+Shape $\ast$p\+\_\+\+Shape)
+bool \hyperlink{class_terrain_a163e210cde25acd11b12a0a68e6f2c66}{is\+Pixel\+Empty} (sf\+::\+Vector2i m\+\_\+\+Pos)
 \item 
-\mbox{\Hypertarget{class_terrain_a46d26ac3525b10ca6bbf065b2627c2b6}\label{class_terrain_a46d26ac3525b10ca6bbf065b2627c2b6}} 
-void {\bfseries draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+void \hyperlink{class_terrain_a57c6fe83cb58a979f73405068cf3b435}{subtract\+Shape} (sf\+::\+Shape \&p\+\_\+\+Shape)
+\item 
+void \hyperlink{class_terrain_a46d26ac3525b10ca6bbf065b2627c2b6}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that handles an sf\+::\+Image and provides methods for objects to react to its pixels. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_terrain_a46d26ac3525b10ca6bbf065b2627c2b6}\label{class_terrain_a46d26ac3525b10ca6bbf065b2627c2b6}} 
+\index{Terrain@{Terrain}!draw@{draw}}
+\index{draw@{draw}!Terrain@{Terrain}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Terrain\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_aeb669403f8c3ed5bd4db2ff68f7f3ee2}\label{class_terrain_aeb669403f8c3ed5bd4db2ff68f7f3ee2}} 
+\index{Terrain@{Terrain}!get\+Normal@{get\+Normal}}
+\index{get\+Normal@{get\+Normal}!Terrain@{Terrain}}
+\subsubsection{\texorpdfstring{get\+Normal()}{getNormal()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Terrain\+::get\+Normal (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+X,  }\item[{int}]{p\+\_\+Y,  }\item[{int}]{p\+\_\+\+Radius }\end{DoxyParamCaption})}
+
+Calculates a unit surface normal from a sqaure of pixels based on transparency 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+X} & X value \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+Y} & Y value \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Radius} & Search radius \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_a163e210cde25acd11b12a0a68e6f2c66}\label{class_terrain_a163e210cde25acd11b12a0a68e6f2c66}} 
+\index{Terrain@{Terrain}!is\+Pixel\+Empty@{is\+Pixel\+Empty}}
+\index{is\+Pixel\+Empty@{is\+Pixel\+Empty}!Terrain@{Terrain}}
+\subsubsection{\texorpdfstring{is\+Pixel\+Empty()}{isPixelEmpty()}}
+{\footnotesize\ttfamily bool Terrain\+::is\+Pixel\+Empty (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{m\+\_\+\+Pos }\end{DoxyParamCaption})}
+
+Checks if a pixel is empty 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em m\+\_\+\+Pos} & Chosen pixel to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_aed679808f60645f640f51ccfcba060ea}\label{class_terrain_aed679808f60645f640f51ccfcba060ea}} 
+\index{Terrain@{Terrain}!load\+Terrain@{load\+Terrain}}
+\index{load\+Terrain@{load\+Terrain}!Terrain@{Terrain}}
+\subsubsection{\texorpdfstring{load\+Terrain()}{loadTerrain()}}
+{\footnotesize\ttfamily void Terrain\+::load\+Terrain (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{p\+\_\+\+Foreground\+Texture,  }\item[{sf\+::\+Texture $\ast$}]{p\+\_\+\+Background\+Texture }\end{DoxyParamCaption})}
+
+Copies a texture to m\+\_\+\+Image. Also sets foreground/background sprite\textquotesingle{}s textures 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Foreground\+Texture} & Texture to be copied to m\+\_\+\+Image and foreground sprite \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Background\+Texture} & Texture for background sprite \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_a57c6fe83cb58a979f73405068cf3b435}\label{class_terrain_a57c6fe83cb58a979f73405068cf3b435}} 
+\index{Terrain@{Terrain}!subtract\+Shape@{subtract\+Shape}}
+\index{subtract\+Shape@{subtract\+Shape}!Terrain@{Terrain}}
+\subsubsection{\texorpdfstring{subtract\+Shape()}{subtractShape()}}
+{\footnotesize\ttfamily void Terrain\+::subtract\+Shape (\begin{DoxyParamCaption}\item[{sf\+::\+Shape \&}]{p\+\_\+\+Shape }\end{DoxyParamCaption})}
+
+Subtract a shape from the image 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Shape} & Polymorphic shape to subtract \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

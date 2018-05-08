@@ -7,8 +7,8 @@
 #include <iostream>
 #include <random>
 
-/* \class Random
-\brief 
+/*! \class Random
+\brief Singleton class that holds random number engines
 */
 
 class Random {

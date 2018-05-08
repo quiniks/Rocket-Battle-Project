@@ -1,0 +1,149 @@
+\hypertarget{class_dynamic_object}{}\section{Dynamic\+Object Class Reference}
+\label{class_dynamic_object}\index{Dynamic\+Object@{Dynamic\+Object}}
+
+
+A kinematic rectangle that can be affected by forces.  
+
+
+
+
+{\ttfamily \#include $<$Dynamic\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Dynamic\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_dynamic_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dynamic\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_dynamic_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dynamic_object_a50a7adf3d7d1f411ed2aa9a663bfe275}\label{class_dynamic_object_a50a7adf3d7d1f411ed2aa9a663bfe275}} 
+\hyperlink{class_dynamic_object_a50a7adf3d7d1f411ed2aa9a663bfe275}{Dynamic\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_a149b612e1f0288b115178874bd0cba93}\label{class_dynamic_object_a149b612e1f0288b115178874bd0cba93}} 
+\hyperlink{class_dynamic_object_a149b612e1f0288b115178874bd0cba93}{$\sim$\+Dynamic\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_dynamic_object_a0a0a7729f35bd16156a2fbb75d50ea1c}{set\+Restitution} (float p\+\_\+\+Restitution)
+\item 
+\mbox{\Hypertarget{class_dynamic_object_a6637df2539ca0aa1a4eed8636863dfac}\label{class_dynamic_object_a6637df2539ca0aa1a4eed8636863dfac}} 
+float \hyperlink{class_dynamic_object_a6637df2539ca0aa1a4eed8636863dfac}{get\+Restitution} ()
+\begin{DoxyCompactList}\small\item\em get restitution \end{DoxyCompactList}\item 
+void \hyperlink{class_dynamic_object_ae3d4fa8bda00ba66b59ade0e01abbec5}{set\+Drag\+Co} (float p\+\_\+\+Drag\+Coefficient)
+\item 
+\mbox{\Hypertarget{class_dynamic_object_a60373c87f1803073f1e5113913828f4f}\label{class_dynamic_object_a60373c87f1803073f1e5113913828f4f}} 
+float \hyperlink{class_dynamic_object_a60373c87f1803073f1e5113913828f4f}{get\+Drag\+Co} ()
+\begin{DoxyCompactList}\small\item\em get drag coefficient \end{DoxyCompactList}\item 
+void \hyperlink{class_dynamic_object_af6fdf32b8d48afff90e68b2c87d9afe5}{set\+Friction\+Co} (float p\+\_\+\+Fric\+Coefficient)
+\item 
+\mbox{\Hypertarget{class_dynamic_object_a0c6789df96b1d9007fbc27aa67303408}\label{class_dynamic_object_a0c6789df96b1d9007fbc27aa67303408}} 
+float \hyperlink{class_dynamic_object_a0c6789df96b1d9007fbc27aa67303408}{get\+Fric\+Co} ()
+\begin{DoxyCompactList}\small\item\em get friction coefficient \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_a63350c6fb11deb4ddd568f589fa08b24}\label{class_dynamic_object_a63350c6fb11deb4ddd568f589fa08b24}} 
+float \hyperlink{class_dynamic_object_a63350c6fb11deb4ddd568f589fa08b24}{get\+Moment\+Of\+Inertia} ()
+\begin{DoxyCompactList}\small\item\em get moment of inertia \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_a55b099784c09e8a8dbd8272af92a102d}\label{class_dynamic_object_a55b099784c09e8a8dbd8272af92a102d}} 
+float \hyperlink{class_dynamic_object_a55b099784c09e8a8dbd8272af92a102d}{get\+Mass} ()
+\begin{DoxyCompactList}\small\item\em get mass \end{DoxyCompactList}\item 
+void \hyperlink{class_dynamic_object_a33c22fe97d62f79152c508c03ada948c}{apply\+Force} (sf\+::\+Vector2f p\+\_\+\+Force)
+\item 
+\mbox{\Hypertarget{class_dynamic_object_ae8948f5724a243df793332b0c8442b0d}\label{class_dynamic_object_ae8948f5724a243df793332b0c8442b0d}} 
+sf\+::\+Float\+Rect \hyperlink{class_dynamic_object_ae8948f5724a243df793332b0c8442b0d}{get\+Bound\+Box} ()
+\begin{DoxyCompactList}\small\item\em get the bounding box \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dynamic_object_a1169a5a6cf16738f27a83b2cddcc72f9}\label{class_dynamic_object_a1169a5a6cf16738f27a83b2cddcc72f9}} 
+virtual float \hyperlink{class_dynamic_object_a1169a5a6cf16738f27a83b2cddcc72f9}{area} ()=0
+\begin{DoxyCompactList}\small\item\em late binding area getter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dynamic_object_ae418fa977f4547419cda31827c266ae8}\label{class_dynamic_object_ae418fa977f4547419cda31827c266ae8}} 
+float \hyperlink{class_dynamic_object_ae418fa977f4547419cda31827c266ae8}{m\+\_\+\+Density} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The density. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_aab95811a0f06dd425a6ecd2a20153083}\label{class_dynamic_object_aab95811a0f06dd425a6ecd2a20153083}} 
+float \hyperlink{class_dynamic_object_aab95811a0f06dd425a6ecd2a20153083}{m\+\_\+\+Mass} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The mass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_ac1fa799a751f1f2b0dd9996f9c2f4c4d}\label{class_dynamic_object_ac1fa799a751f1f2b0dd9996f9c2f4c4d}} 
+float \hyperlink{class_dynamic_object_ac1fa799a751f1f2b0dd9996f9c2f4c4d}{m\+\_\+\+Restitution} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em The restitution. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_a7721debe06365b091f533b9f1641c2b2}\label{class_dynamic_object_a7721debe06365b091f533b9f1641c2b2}} 
+float \hyperlink{class_dynamic_object_a7721debe06365b091f533b9f1641c2b2}{m\+\_\+\+Drag\+Coefficient} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em The default drag coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_aeff80849df69f067cba4b67b8d64019b}\label{class_dynamic_object_aeff80849df69f067cba4b67b8d64019b}} 
+float \hyperlink{class_dynamic_object_aeff80849df69f067cba4b67b8d64019b}{m\+\_\+\+Friction\+Coefficient} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em The default friction coefficient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_a860cf85df59fd5d08810d082a43fdab1}\label{class_dynamic_object_a860cf85df59fd5d08810d082a43fdab1}} 
+float \hyperlink{class_dynamic_object_a860cf85df59fd5d08810d082a43fdab1}{m\+\_\+\+Moment\+Of\+Inertia} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The default moment of inertia;. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dynamic_object_a7149219cede0b96d7d381b424ae3dd3f}\label{class_dynamic_object_a7149219cede0b96d7d381b424ae3dd3f}} 
+sf\+::\+Float\+Rect \hyperlink{class_dynamic_object_a7149219cede0b96d7d381b424ae3dd3f}{m\+\_\+\+Bounding\+Box}
+\begin{DoxyCompactList}\small\item\em The bounding box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A kinematic rectangle that can be affected by forces. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dynamic_object_a33c22fe97d62f79152c508c03ada948c}\label{class_dynamic_object_a33c22fe97d62f79152c508c03ada948c}} 
+\index{Dynamic\+Object@{Dynamic\+Object}!apply\+Force@{apply\+Force}}
+\index{apply\+Force@{apply\+Force}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection{\texorpdfstring{apply\+Force()}{applyForce()}}
+{\footnotesize\ttfamily void Dynamic\+Object\+::apply\+Force (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{p\+\_\+\+Force }\end{DoxyParamCaption})}
+
+apply a force 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Force} & the force to be applied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_object_ae3d4fa8bda00ba66b59ade0e01abbec5}\label{class_dynamic_object_ae3d4fa8bda00ba66b59ade0e01abbec5}} 
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Drag\+Co@{set\+Drag\+Co}}
+\index{set\+Drag\+Co@{set\+Drag\+Co}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection{\texorpdfstring{set\+Drag\+Co()}{setDragCo()}}
+{\footnotesize\ttfamily void Dynamic\+Object\+::set\+Drag\+Co (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Drag\+Coefficient }\end{DoxyParamCaption})}
+
+set drag coefficient 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Drag\+Coefficient} & the drag coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_object_af6fdf32b8d48afff90e68b2c87d9afe5}\label{class_dynamic_object_af6fdf32b8d48afff90e68b2c87d9afe5}} 
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Friction\+Co@{set\+Friction\+Co}}
+\index{set\+Friction\+Co@{set\+Friction\+Co}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection{\texorpdfstring{set\+Friction\+Co()}{setFrictionCo()}}
+{\footnotesize\ttfamily void Dynamic\+Object\+::set\+Friction\+Co (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Fric\+Coefficient }\end{DoxyParamCaption})}
+
+set friction coefficient 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Fric\+Coefficient} & the friction coefficient \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dynamic_object_a0a0a7729f35bd16156a2fbb75d50ea1c}\label{class_dynamic_object_a0a0a7729f35bd16156a2fbb75d50ea1c}} 
+\index{Dynamic\+Object@{Dynamic\+Object}!set\+Restitution@{set\+Restitution}}
+\index{set\+Restitution@{set\+Restitution}!Dynamic\+Object@{Dynamic\+Object}}
+\subsubsection{\texorpdfstring{set\+Restitution()}{setRestitution()}}
+{\footnotesize\ttfamily void Dynamic\+Object\+::set\+Restitution (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Restitution }\end{DoxyParamCaption})}
+
+set Restitution 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Restitution} & the bounciness value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_dynamic_object_8h}{Dynamic\+Object.\+h}\end{DoxyCompactItemize}

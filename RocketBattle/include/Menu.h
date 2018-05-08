@@ -11,7 +11,7 @@
 #include "TextButton.h"
 #include "Game.h"
 
-/* \class Menu
+/*! \class Menu
 \brief A menu scene that displays some useful info and allows you to start the game
 */
 

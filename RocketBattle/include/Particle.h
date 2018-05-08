@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "DynamicObject.h"
 
-/* \class Particle
+/*! \class Particle
 \brief A dynamic object that keeps track of how long it exists for and its previous position
 */
 

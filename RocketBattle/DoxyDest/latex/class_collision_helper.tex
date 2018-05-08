@@ -1,0 +1,135 @@
+\hypertarget{class_collision_helper}{}\section{Collision\+Helper Class Reference}
+\label{class_collision_helper}\index{Collision\+Helper@{Collision\+Helper}}
+
+
+A class that contains all the relavent collision checking and resolve methods.  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Helper.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_collision_helper_a57aca4d1a02c1309ca7f80eaecbb4edf}{resolve} (\hyperlink{class_particle}{Particle} \&p\+\_\+\+Particle, sf\+::\+Vector2f p\+\_\+\+Normal, sf\+::\+Vector2i p\+\_\+\+Collision\+Pos)
+\item 
+static void \hyperlink{class_collision_helper_aec0ce6765c1be0da596147c9df11e69d}{resolve} (\hyperlink{class_dynamic_object}{Dynamic\+Object} \&p\+\_\+\+Dynamic\+Obj, sf\+::\+Vector2f p\+\_\+\+Normal, float p\+\_\+\+Delta\+Time)
+\item 
+static bool \hyperlink{class_collision_helper_a29f24f7dfa3f65415d415dd23e31bed1}{ray\+Cast} (sf\+::\+Vector2i p\+\_\+\+Start, sf\+::\+Vector2i p\+\_\+\+Target, \hyperlink{class_terrain}{Terrain} \&p\+\_\+\+Terrain, sf\+::\+Vector2i \&p\+\_\+\+Hit\+Pos)
+\item 
+static bool \hyperlink{class_collision_helper_a98d43fd6735513956419fceb047ac4bd}{A\+A\+B\+Bvs\+Terrain} (sf\+::\+Float\+Rect p\+\_\+\+BB, sf\+::\+Vector2f p\+\_\+\+Pos, \hyperlink{class_terrain}{Terrain} \&p\+\_\+\+Terrain, sf\+::\+Vector2f \&p\+\_\+\+Average\+Unit\+Normal)
+\item 
+static bool \hyperlink{class_collision_helper_a11469523b5a2b22f10d7d827af1f7e18}{A\+A\+B\+Bvs\+A\+A\+BB} (sf\+::\+Float\+Rect p\+\_\+\+B\+B1, sf\+::\+Vector2f p\+\_\+\+Pos1, sf\+::\+Float\+Rect p\+\_\+\+B\+B2, sf\+::\+Vector2f p\+\_\+\+Pos2)
+\item 
+static bool \hyperlink{class_collision_helper_a3f3e49b546e37ce2e457dc6582c97adf}{A\+A\+B\+Bvs\+Circle} (sf\+::\+Circle\+Shape p\+\_\+\+Circle1, sf\+::\+Vector2f p\+\_\+\+Pos1, sf\+::\+Float\+Rect p\+\_\+\+B\+B2, sf\+::\+Vector2f p\+\_\+\+Pos2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that contains all the relavent collision checking and resolve methods. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collision_helper_a11469523b5a2b22f10d7d827af1f7e18}\label{class_collision_helper_a11469523b5a2b22f10d7d827af1f7e18}} 
+\index{Collision\+Helper@{Collision\+Helper}!A\+A\+B\+Bvs\+A\+A\+BB@{A\+A\+B\+Bvs\+A\+A\+BB}}
+\index{A\+A\+B\+Bvs\+A\+A\+BB@{A\+A\+B\+Bvs\+A\+A\+BB}!Collision\+Helper@{Collision\+Helper}}
+\subsubsection{\texorpdfstring{A\+A\+B\+Bvs\+A\+A\+B\+B()}{AABBvsAABB()}}
+{\footnotesize\ttfamily static bool Collision\+Helper\+::\+A\+A\+B\+Bvs\+A\+A\+BB (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{p\+\_\+\+B\+B1,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Pos1,  }\item[{sf\+::\+Float\+Rect}]{p\+\_\+\+B\+B2,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Pos2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Axis Aligned Bounding Box vs Axis Aligned Bounding Box collision check 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+B\+B1} & Bounding box 1 \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Pos1} & Position of Bounding Box 1 \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+B\+B2} & Bounding box 2 \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Pos2} & Position of Bounding Box 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_collision_helper_a3f3e49b546e37ce2e457dc6582c97adf}\label{class_collision_helper_a3f3e49b546e37ce2e457dc6582c97adf}} 
+\index{Collision\+Helper@{Collision\+Helper}!A\+A\+B\+Bvs\+Circle@{A\+A\+B\+Bvs\+Circle}}
+\index{A\+A\+B\+Bvs\+Circle@{A\+A\+B\+Bvs\+Circle}!Collision\+Helper@{Collision\+Helper}}
+\subsubsection{\texorpdfstring{A\+A\+B\+Bvs\+Circle()}{AABBvsCircle()}}
+{\footnotesize\ttfamily static bool Collision\+Helper\+::\+A\+A\+B\+Bvs\+Circle (\begin{DoxyParamCaption}\item[{sf\+::\+Circle\+Shape}]{p\+\_\+\+Circle1,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Pos1,  }\item[{sf\+::\+Float\+Rect}]{p\+\_\+\+B\+B2,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Pos2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Axis Aligned Bounding Box vs Circle collision check 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Circle1} & Circle 1 \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Pos1} & Position of Circle 1 \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+B\+B2} & Bounding box 2 \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Pos2} & Position of Bounding Box 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_collision_helper_a98d43fd6735513956419fceb047ac4bd}\label{class_collision_helper_a98d43fd6735513956419fceb047ac4bd}} 
+\index{Collision\+Helper@{Collision\+Helper}!A\+A\+B\+Bvs\+Terrain@{A\+A\+B\+Bvs\+Terrain}}
+\index{A\+A\+B\+Bvs\+Terrain@{A\+A\+B\+Bvs\+Terrain}!Collision\+Helper@{Collision\+Helper}}
+\subsubsection{\texorpdfstring{A\+A\+B\+Bvs\+Terrain()}{AABBvsTerrain()}}
+{\footnotesize\ttfamily static bool Collision\+Helper\+::\+A\+A\+B\+Bvs\+Terrain (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{p\+\_\+\+BB,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Pos,  }\item[{\hyperlink{class_terrain}{Terrain} \&}]{p\+\_\+\+Terrain,  }\item[{sf\+::\+Vector2f \&}]{p\+\_\+\+Average\+Unit\+Normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Axis Aligned Bounding Box vs \hyperlink{class_terrain}{Terrain} collision check 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+BB} & Bounding box \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Pos} & Position of Bounding Box \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Terrain} & The terrain \\
+\hline
+\mbox{\tt out}  & {\em p\+\_\+\+Average\+Unit\+Normal} & the average unit surface normal of edge points of the bounding box inside the terrain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_collision_helper_a29f24f7dfa3f65415d415dd23e31bed1}\label{class_collision_helper_a29f24f7dfa3f65415d415dd23e31bed1}} 
+\index{Collision\+Helper@{Collision\+Helper}!ray\+Cast@{ray\+Cast}}
+\index{ray\+Cast@{ray\+Cast}!Collision\+Helper@{Collision\+Helper}}
+\subsubsection{\texorpdfstring{ray\+Cast()}{rayCast()}}
+{\footnotesize\ttfamily static bool Collision\+Helper\+::ray\+Cast (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2i}]{p\+\_\+\+Start,  }\item[{sf\+::\+Vector2i}]{p\+\_\+\+Target,  }\item[{\hyperlink{class_terrain}{Terrain} \&}]{p\+\_\+\+Terrain,  }\item[{sf\+::\+Vector2i \&}]{p\+\_\+\+Hit\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Iterate from point a to b and return true if the ray hits the terrain 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Start} & Tay start position \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Target} & Tay target position \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Terrain} & The terrain \\
+\hline
+\mbox{\tt out}  & {\em p\+\_\+\+Hit\+Pos} & the point at which the ray hits the terrain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_collision_helper_a57aca4d1a02c1309ca7f80eaecbb4edf}\label{class_collision_helper_a57aca4d1a02c1309ca7f80eaecbb4edf}} 
+\index{Collision\+Helper@{Collision\+Helper}!resolve@{resolve}}
+\index{resolve@{resolve}!Collision\+Helper@{Collision\+Helper}}
+\subsubsection{\texorpdfstring{resolve()}{resolve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Collision\+Helper\+::resolve (\begin{DoxyParamCaption}\item[{\hyperlink{class_particle}{Particle} \&}]{p\+\_\+\+Particle,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Normal,  }\item[{sf\+::\+Vector2i}]{p\+\_\+\+Collision\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+resolve a particle collision 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Particle} & The particle that collided \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Normal} & the surface normal \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Collision\+Pos} & the point of impact \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_collision_helper_aec0ce6765c1be0da596147c9df11e69d}\label{class_collision_helper_aec0ce6765c1be0da596147c9df11e69d}} 
+\index{Collision\+Helper@{Collision\+Helper}!resolve@{resolve}}
+\index{resolve@{resolve}!Collision\+Helper@{Collision\+Helper}}
+\subsubsection{\texorpdfstring{resolve()}{resolve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Collision\+Helper\+::resolve (\begin{DoxyParamCaption}\item[{\hyperlink{class_dynamic_object}{Dynamic\+Object} \&}]{p\+\_\+\+Dynamic\+Obj,  }\item[{sf\+::\+Vector2f}]{p\+\_\+\+Normal,  }\item[{float}]{p\+\_\+\+Delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+resolve a dynamic object collision 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Dynamic\+Obj} & The dynamic object that collided \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Normal} & The surface normal \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+\+Delta\+Time} & The time elapsed since last frame \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_collision_helper_8h}{Collision\+Helper.\+h}\end{DoxyCompactItemize}

@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-/* \class Kinematic
+/*! \class Kinematic
 \brief A class that provides methods to create motion using position, velocity and acceleration
 */
 
@@ -44,7 +44,7 @@ public:
 	void setPosition(sf::Vector2f p_Position);
 	/*!
 	* Set velocity
-	* @param[in] p_Velocity position
+	* @param[in] p_Velocity velocity
 	*/
 	void setVelocity(sf::Vector2f p_Velocity);
 	//void setAcceleration(sf::Vector2f p_Acceleration);
@@ -53,7 +53,7 @@ public:
 	//void setAngularAccel(float p_AngularAccel);
 	/*!
 	* Update function that calls the child's update function, intergrates and resets acceleration to 0
-	* @param[in] p_Velocity position
+	* @param[in] p_DeltaTime elapsed time
 	*/
 	void polyUpdate(float p_DeltaTime);
 	/*!

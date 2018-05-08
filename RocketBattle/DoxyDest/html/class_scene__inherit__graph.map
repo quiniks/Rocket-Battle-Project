@@ -1,0 +1,5 @@
+<map id="Scene" name="Scene">
+<area shape="rect" id="node3" href="$class_game.html" title="A game scene that runs the rocket battle game. " alt="" coords="5,155,63,181"/>
+<area shape="rect" id="node4" href="$class_game_over.html" title="A menu scene that displays some useful info and allows you to start the game. " alt="" coords="87,155,170,181"/>
+<area shape="rect" id="node5" href="$class_menu.html" title="A menu scene that displays some useful info and allows you to start the game. " alt="" coords="195,155,249,181"/>
+</map>

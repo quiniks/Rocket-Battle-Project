@@ -1,0 +1,159 @@
+\hypertarget{class_scene}{}\section{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+A class that provides late binding methods for an interactable screen e.\+g. a game or a menu.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+
+
+Inheritance diagram for Scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{class_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Scene\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\label{class_scene_ad10176d75a9cc0da56626f682d083507}} 
+\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}} 
+\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_a182f90e2638c0da6a8ba2eab7cdc73ae}{handle\+Keyboard\+Input} (int p\+\_\+\+Key)=0
+\item 
+virtual void \hyperlink{class_scene_ad9240c92a58c4dba4c2409ec8bcff686}{handle\+Mouse\+Input} (sf\+::\+Mouse\+::\+Button p\+\_\+\+Button)=0
+\item 
+void \hyperlink{class_scene_a2cdbd23d08e1faa0becceaf8bd130ac7}{handle\+Mouse\+Move} (const sf\+::\+Render\+Window \&p\+\_\+\+Window)
+\item 
+virtual void \hyperlink{class_scene_a461d21cd952c7dd0556850a3fc95a760}{update} (float p\+\_\+\+Time\+Step)=0
+\item 
+virtual void \hyperlink{class_scene_ac3fd1d41fa7b7516eeff009de7550552}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const =0
+\item 
+\mbox{\Hypertarget{class_scene_a6229a5c43e32fe5b92357e61850e8b0d}\label{class_scene_a6229a5c43e32fe5b92357e61850e8b0d}} 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_scene_a6229a5c43e32fe5b92357e61850e8b0d}{get\+Next\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the heap for the next scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a67993233347f2f6ab2765598b627d9aa}\label{class_scene_a67993233347f2f6ab2765598b627d9aa}} 
+bool \hyperlink{class_scene_a67993233347f2f6ab2765598b627d9aa}{is\+Scene\+Finished} ()
+\begin{DoxyCompactList}\small\item\em Returns true if m\+\_\+\+Next\+Scene isnt a nullptr. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_afb6e039ff2c88295876cf83e599644f4}\label{class_scene_afb6e039ff2c88295876cf83e599644f4}} 
+bool \hyperlink{class_scene_afb6e039ff2c88295876cf83e599644f4}{get\+Debug} ()
+\begin{DoxyCompactList}\small\item\em Returns the debug state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_a7c893a2bcd5b45f758d1ca2596f2c080}\label{class_scene_a7c893a2bcd5b45f758d1ca2596f2c080}} 
+bool \hyperlink{class_scene_a7c893a2bcd5b45f758d1ca2596f2c080}{m\+\_\+\+Debug} = false
+\begin{DoxyCompactList}\small\item\em Debug boolean. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_ac481124f477d63e6c71993685b4bd675}\label{class_scene_ac481124f477d63e6c71993685b4bd675}} 
+sf\+::\+View \hyperlink{class_scene_ac481124f477d63e6c71993685b4bd675}{m\+\_\+\+View}
+\begin{DoxyCompactList}\small\item\em The view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a7f2cc1644a291a7102b8e1d069541d65}\label{class_scene_a7f2cc1644a291a7102b8e1d069541d65}} 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_scene_a7f2cc1644a291a7102b8e1d069541d65}{m\+\_\+\+Next\+Scene} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to next scene. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a2f342aba86b1baa65a92a201ebf89502}\label{class_scene_a2f342aba86b1baa65a92a201ebf89502}} 
+sf\+::\+Vector2u \hyperlink{class_scene_a2f342aba86b1baa65a92a201ebf89502}{m\+\_\+\+Window\+Size}
+\begin{DoxyCompactList}\small\item\em A copy of the initial window size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a4714ea68285b5fb621f9355ac09f3a63}\label{class_scene_a4714ea68285b5fb621f9355ac09f3a63}} 
+sf\+::\+Vector2f \hyperlink{class_scene_a4714ea68285b5fb621f9355ac09f3a63}{m\+\_\+\+Mouse\+World\+Pos}
+\begin{DoxyCompactList}\small\item\em The current mouse pos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that provides late binding methods for an interactable screen e.\+g. a game or a menu. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_ac3fd1d41fa7b7516eeff009de7550552}\label{class_scene_ac3fd1d41fa7b7516eeff009de7550552}} 
+\index{Scene@{Scene}!draw@{draw}}
+\index{draw@{draw}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Scene\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Draw 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em target} & Render target to draw to \\
+\hline
+\mbox{\tt in}  & {\em states} & Render state \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_game_a143d1a2f8a527db60f1fe47ab3d854a7}{Game}, \hyperlink{class_game_over_a4792ee9e2b587f98576a8023d34f5f5c}{Game\+Over}, and \hyperlink{class_menu_aa0e69963ee402f3559680e5a691b03fd}{Menu}.
+
+\mbox{\Hypertarget{class_scene_a182f90e2638c0da6a8ba2eab7cdc73ae}\label{class_scene_a182f90e2638c0da6a8ba2eab7cdc73ae}} 
+\index{Scene@{Scene}!handle\+Keyboard\+Input@{handle\+Keyboard\+Input}}
+\index{handle\+Keyboard\+Input@{handle\+Keyboard\+Input}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{handle\+Keyboard\+Input()}{handleKeyboardInput()}}
+{\footnotesize\ttfamily virtual void Scene\+::handle\+Keyboard\+Input (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Handle keyboard input events 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Key} & The Key that was pressed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_game_a6ccc7e91593f06a0e722cc419016a237}{Game}, \hyperlink{class_game_over_aae04263371e8f82199df51de54ef77d1}{Game\+Over}, and \hyperlink{class_menu_a2ebc63a5e64b90dcfae4284e7f7f4be6}{Menu}.
+
+\mbox{\Hypertarget{class_scene_ad9240c92a58c4dba4c2409ec8bcff686}\label{class_scene_ad9240c92a58c4dba4c2409ec8bcff686}} 
+\index{Scene@{Scene}!handle\+Mouse\+Input@{handle\+Mouse\+Input}}
+\index{handle\+Mouse\+Input@{handle\+Mouse\+Input}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{handle\+Mouse\+Input()}{handleMouseInput()}}
+{\footnotesize\ttfamily virtual void Scene\+::handle\+Mouse\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Mouse\+::\+Button}]{p\+\_\+\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Handle mouse input events 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Button} & The button that was pressed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_game_a1c0ddbb7a468997249acbdd6cf2dbe34}{Game}, \hyperlink{class_game_over_a83c0cecb3faab5ea8c36272e931006f7}{Game\+Over}, and \hyperlink{class_menu_a4f99fe96e47268bd4561df0c8faa23c8}{Menu}.
+
+\mbox{\Hypertarget{class_scene_a2cdbd23d08e1faa0becceaf8bd130ac7}\label{class_scene_a2cdbd23d08e1faa0becceaf8bd130ac7}} 
+\index{Scene@{Scene}!handle\+Mouse\+Move@{handle\+Mouse\+Move}}
+\index{handle\+Mouse\+Move@{handle\+Mouse\+Move}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{handle\+Mouse\+Move()}{handleMouseMove()}}
+{\footnotesize\ttfamily void Scene\+::handle\+Mouse\+Move (\begin{DoxyParamCaption}\item[{const sf\+::\+Render\+Window \&}]{p\+\_\+\+Window }\end{DoxyParamCaption})}
+
+Handle mouse mouse movement 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Window} & Used to calculate mouse pos relative to the window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_a461d21cd952c7dd0556850a3fc95a760}\label{class_scene_a461d21cd952c7dd0556850a3fc95a760}} 
+\index{Scene@{Scene}!update@{update}}
+\index{update@{update}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Scene\+::update (\begin{DoxyParamCaption}\item[{float}]{p\+\_\+\+Time\+Step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the scene 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+\+Time\+Step} & the change in time since the last frame \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_game_a3fd12339411955db6a5445ba213ef293}{Game}, \hyperlink{class_game_over_a6b9465b5c095a1de0e467baf17045fac}{Game\+Over}, and \hyperlink{class_menu_a8043b25a060513367b0e286d3ae397d2}{Menu}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_scene_8h}{Scene.\+h}\end{DoxyCompactItemize}
